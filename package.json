@@ -1,13 +1,11 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "leaf",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "The plant people",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
+  "author": "chris dunne",
   "dependencies": {
+    "bootstrap": "^5.1.1",
     "gatsby": "^3.14.2",
     "gatsby-plugin-feed": "^3.14.0",
     "gatsby-plugin-google-analytics": "^3.14.0",
@@ -15,6 +13,7 @@
     "gatsby-plugin-manifest": "^3.14.0",
     "gatsby-plugin-offline": "^4.14.0",
     "gatsby-plugin-react-helmet": "^4.14.0",
+    "gatsby-plugin-sass": "^4.14.0",
     "gatsby-plugin-sharp": "^3.14.1",
     "gatsby-remark-copy-linked-files": "^4.11.0",
     "gatsby-remark-images": "^5.11.0",
@@ -26,8 +25,10 @@
     "gatsby-transformer-sharp": "^3.14.0",
     "prismjs": "^1.25.0",
     "react": "^17.0.1",
+    "react-bootstrap": "^2.0.0-rc.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "sass": "^1.43.2",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
