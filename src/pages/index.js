@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import leaf from '../images/leaf.png'
+import placeholderPlant from '../images/placeholderPlant.jpg'
 import { Button, Container,Row, Col } from 'react-bootstrap';
 
 
@@ -19,6 +20,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <>
     <Container fluid >
+
 
       <Row className="header"> 
         <Col >
@@ -38,26 +40,70 @@ const BlogIndex = ({ data, location }) => {
 
     </Container>
 
-    <Container fluid>
-      <Row >
-        <Col lg={10}>
-          <div className="section2">
+    <Container className="bodyContent" fluid="lg">
+      <Row className="bodySection1">
+
+        <Col lg={12}>
+          <div>
             <h1>Types of Cactus</h1>
-            <ul>
-              <li>Rows of cactus images</li>
-              <li>A number load in straight away</li>
-              <li>...more will load as you scroll</li>
-              <li>Clicking on these will display a popup, with more information</li>
-              <li>animate this popup appearing and disappearing</li>
-            </ul>
+            <Row className="itemWrapper">
+              <Col md={3} sm={6}>
+                <img src={placeholderPlant} />
+                <h3>Title</h3>
+                <span>laternus nameinus</span>
+              </Col>
+
+              <Col md={3} sm={6}>
+                <img src={placeholderPlant} />
+                <h3>Title</h3>
+                <span>laternus nameinus</span>
+              </Col>
+
+              <Col md={3} sm={6}>
+                <img src={placeholderPlant} />
+                <h3>Title</h3>
+                <span>laternus nameinus</span>
+              </Col>
+
+              <Col md={3} sm={6}>
+                <img src={placeholderPlant} />
+                <h3>Title</h3>
+                <span>laternus nameinus</span>
+              </Col>
+
+              <Col md={3} sm={6}>
+                <img src={placeholderPlant} />
+                <h3>Title</h3>
+                <span>laternus nameinus</span>
+              </Col>
+
+              <Col md={3} sm={6}>
+                <img src={placeholderPlant} />
+                <h3>Title</h3>
+                <span>laternus nameinus</span>
+              </Col>
+
+              <Col md={3} sm={6}>
+                <img src={placeholderPlant} />
+                <h3>Title</h3>
+                <span>laternus nameinus</span>
+              </Col>
+
+              <Col md={3} sm={6}>
+                <img src={placeholderPlant} />
+                <h3>Title</h3>
+                <span>laternus nameinus</span>
+              </Col>
+            </Row>
           </div>
         </Col>
+
       </Row>
 
-      <Row >
-        <Col lg={10}>
-          <div className="section2">
-            <h1>Section 2</h1>
+      <Row className="bodySection2">
+        <Col lg={12}>
+          <div>
+            <h1>Body Section 2</h1>
           </div>
         </Col>
       </Row>
