@@ -4,6 +4,7 @@
     // outline: 1px solid black
     
 
+$borderRadius: 20px
 
 .header
     div
@@ -49,20 +50,64 @@
             div
                 .itemWrapper
                     div
+                        cursor: pointer
                         display: flex
                         flex-direction: column
                         align-items: center
                         justify-content: center
+
                         height: 250px
-                        // outline: 1px solid red
-                        position: relative
+                        outline: 1px solid red
+                        // position: relative
                         span
                             width: 90%
                             // outline: 1px solid black
                             text-align: center
                             color: grey
                         img
-                            border-radius: 20px
+                            border-radius: $borderRadius
                             height: 150px
                         h3
                             margin: 0
+.popupWrapper
+    // background-color: #00000059
+    display: flex
+    align-items: center
+    height: 100%
+    left: -10000000000%
+    padding: 0
+    position: fixed
+    width: 100%
+    top: 0%
+    // transform: translate(-50%, -50%)
+    .popupBackground
+        background-color: #00000059
+        cursor: pointer
+        height: 100%
+        // left: 0%
+        position: absolute
+        // top: 0%
+        width: 100%
+        z-index: 0
+
+    .popupContent
+        background-color: #407b53
+        border-radius: $borderRadius
+        display: flex
+        align-items: center
+        height: 500px
+        max-width: 900px
+        width: 90%
+        z-index: 10
+
+        .popupColumn1
+            width: 40%
+        .popupColumn2
+            width: 60%
+        div
+            padding: 20px
+            background-color: orange
+.showWrapper
+    left: 0%
+.hideWrapper
+    left: -10000000000%

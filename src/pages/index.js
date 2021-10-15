@@ -17,6 +17,18 @@ const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
   console.log(posts)
+
+
+  function showPopup(id){
+    console.log("Show Popup " + id)
+    document.getElementById("popup").classList.add("showWrapper")
+  }
+  function hidePopup(){
+    console.log("Hide Popup")
+    document.getElementById("popup").classList.remove("showWrapper")
+  }
+
+
   return (
     <>
     <Container fluid >
@@ -45,21 +57,21 @@ const BlogIndex = ({ data, location }) => {
 
         <Col lg={12}>
           <div>
-            <h1>Types of Cactus</h1>
+            <h1>Plant Gallery</h1>
             <Row className="itemWrapper">
-              <Col md={3} sm={6}>
+              <Col md={3} sm={6} onClick={()=>showPopup(1)}>
                 <img src={placeholderPlant} />
                 <h3>Title</h3>
                 <span>laternus nameinus</span>
               </Col>
 
-              <Col md={3} sm={6}>
+              <Col md={3} sm={6} onClick={()=>showPopup(2)}>
                 <img src={placeholderPlant} />
                 <h3>Title</h3>
                 <span>laternus nameinus</span>
               </Col>
 
-              <Col md={3} sm={6}>
+              <Col md={3} sm={6} onClick={()=>showPopup(3)}>
                 <img src={placeholderPlant} />
                 <h3>Title</h3>
                 <span>laternus nameinus</span>
@@ -98,6 +110,22 @@ const BlogIndex = ({ data, location }) => {
           </div>
         </Col>
 
+        <div className="popupWrapper" id="popup" >
+          
+          <div className="popupContent" onClick={null}>
+
+            <div className="popupColumn1">
+              <h1>Image</h1>
+            </div>
+            <div className="popupColumn2">
+              <h1>Title</h1>
+              <h2>Text</h2>
+            </div>
+
+          </div>
+          <div onClick={()=>hidePopup()} className="popupBackground" ></div>
+        </div>
+        
       </Row>
 
       <Row className="bodySection2">
