@@ -26,3 +26,5 @@ To-Do:
   Section 1:
     ☐ Get rows of 4 in place
     ☐ Design plant info sections
+    ☐ Load Items on Scroll
+      ☐ Spent a lot of time on this today (15/10/2021) and I haven't gotten too far. The good news is that I can create the same functionality with a click pretty easily so I have an out if I can't get this to work. I also have another option of just using a scroll event listener to check for the bottom of the page. So, not a lot of success but I did spent a lot of time getting to know hooks so it wasn't a total waste of time. However, i don't want to get bogged down so i'll give myself another half day to figure it out, if I can't then i will use one of the aforementioned outs.
