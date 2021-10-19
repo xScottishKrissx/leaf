@@ -80,7 +80,6 @@ export default class BlogIndex extends React.Component {
               <div>
                 <span>welcome to</span>
                 <h1>leaf.com </h1>
-                <button >Increase Hook State thing</button>
                 <img src={leaf} />
               </div>
   
@@ -193,6 +192,65 @@ export default class BlogIndex extends React.Component {
               </Row>
           </Col>
         </Row>
+
+
+        <Row className="bodySection3">
+
+          <Col lg={12}>
+            <h1>Section Header</h1>
+              <Row className="sectionContentWrapper">
+                <Col><p>Descriptive Text</p></Col>
+                <Col md={7}><img src={placeholderPlant} /></Col>
+              </Row>
+              <Row className="sectionContentWrapper">
+                <Col md={7}><img src={placeholderPlant} /></Col>
+                <Col ><p>Descriptive Text</p></Col>
+              </Row>
+          </Col>
+
+        </Row>
+
+        <Row className="bodySection4">
+
+          <Col lg={12}>
+            <h1>Blog Pages</h1>
+              <Row className="sectionContentWrapper">
+                <Col>
+                  <img src={placeholderPlant} />
+                  <p>Blog Title</p>
+                  <p>Blog Copy</p>
+                </Col>
+
+                <Col>
+                  <img src={placeholderPlant} />
+                  <p>Blog Title</p>
+                  <p>Blog Copy</p>
+                </Col>
+
+                <Col>
+                  <img src={placeholderPlant} />
+                  <p>Blog Title</p>
+                  <p>Blog Copy</p>
+                </Col>
+
+                <Col>
+                  <img src={placeholderPlant} />
+                  <p>Blog Title</p>
+                  <p>Blog Copy</p>
+                </Col>
+              </Row>
+          </Col>
+
+          </Row>
+  
+      </Container>
+
+      <Container fluid className="footer">
+  
+        <Row className="justify-content-lg-center">
+          <Col lg="12"><h1>Footer</h1></Col>
+        </Row>
+
   
       </Container>
   
