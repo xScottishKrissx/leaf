@@ -3,7 +3,8 @@ Todo:
   Goals:
     ☐ More practice with react and gatsby
     ☐ more practice with animate on scroll
-    ☐ more practice
+    ☐ more practice with bootstrap
+      ☐ actually use the syntax(bonus points for variables and mixins)
 
   
 Notes:
@@ -30,21 +31,26 @@ To-Do:
         ☐ after splitting code into components.
   
   Section 1 -  Gallery:
-    ☐ Get rows of 4 in place
-    ☐ Design plant info sections
+    ✔ Get rows of 4 in place @done(18:29 - 21/10/21)
+    ✔ Design plant info sections @done(18:29 - 21/10/21)
     ☐ Load Items on Scroll
       ☐ Spent a lot of time on this today (15/10/2021) and I haven't gotten too far. The good news is that I can create the same functionality with a click pretty easily so I have an out if I can't get this to work. I also have another option of just using a scroll event listener to check for the bottom of the page. So, not a lot of success but I did spent a lot of time getting to know hooks so it wasn't a total waste of time. However, i don't want to get bogged down so i'll give myself another half day to figure it out, if I can't then i will use one of the aforementioned outs.
     ☐ Bootstrap has a modal, use this isntead of the custom popup
+    ☐ Transfer sass
 
   Section 2 - Bio:
-    ☐ ...
-    
+    ✔ Component Created @done(18:28 - 21/10/21)
+    ☐ Transfer sass
+
   Section 3 - Uses:
-    ☐ ...
+    ✔ Component Created @done(18:28 - 21/10/21)
+    ☐ Transfer sass
 
   Section 4 - Blog Gallery:
-    ☐ ...
+    ✔ Component Created @done(18:28 - 21/10/21)
+    ☐ Transfer sass
 
   Footer:
-    ☐ In the absence of ideas, add a footer to the bottom of the page.
+    ✔ In the absence of ideas, add a footer to the bottom of the page. @done(18:29 - 21/10/21)
       Maybe this will inspire something as i come up with ideas.
+    ☐ Transfer sass

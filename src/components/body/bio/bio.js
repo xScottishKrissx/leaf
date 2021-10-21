@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-// import './your.css'
+import './bio.sass'
 
-import { Container, Row, Col, Button } from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
 
 import who1 from '../../../images/who_1.png'
 import who2 from '../../../images/who_2.png'

@@ -5,14 +5,6 @@ import './index.sass'
 
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-import leaf from '../images/leaf.png'
-
-
-
 import { Button, Container,Row, Col, Stack } from 'react-bootstrap';
 import Modal from 'react-bootstrap/Modal'
 import MyModal from "../components/modal"
@@ -26,19 +18,10 @@ export default class BlogIndex extends React.Component {
     super(props);
     this.state = {
         counter:0,
-      galleryArray:this.props.data.allMarkdownRemark.nodes
+        galleryArray:this.props.data.allMarkdownRemark.nodes
     }
     window.addEventListener('scroll', this.scroll);      
 }
-
-  showPopup(title,body){
-    // console.log("Show Popup " + id)
-    // document.getElementById("popup").classList.add("showWrapper")
-  }
-  hidePopup(){
-    // console.log("Hide Popup")
-    // document.getElementById("popup").classList.remove("showWrapper")
-  }
 
   // scroll = (e) =>{
   //     const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
@@ -62,38 +45,17 @@ export default class BlogIndex extends React.Component {
 
   render(){
 
-
-    console.log(this.state.counter)
     const siteTitle = this.props.data.site.siteMetadata?.title || `Title`
     const posts = this.state.galleryArray
     console.log(posts)
 
-
-
     return (
       <>
-      <Header />
-      <Body posts={posts} />
-      <Footer />
-      
 
+        <Header />
+        <Body posts={posts} />
+        <Footer />    
 
-
-
-
-      <Container fluid="lg" className="footer">
-  
-        <Row className="justify-content-lg-center">
-          <Col lg="12">
-               <div>
-                <img src={leaf} />
-               </div>
-          </Col>
-        </Row>
-
-  
-      </Container>
-  
       </>
     )
   }

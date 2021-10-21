@@ -9,6 +9,15 @@ import placeholderPlant from '../../../images/placeholderPlant.jpg'
 
 export const Gallery = (props) =>{
 
+  function showPopup(title,body){
+    // console.log("Show Popup " + id)
+    // document.getElementById("popup").classList.add("showWrapper")
+  }
+  function hidePopup(){
+    // console.log("Hide Popup")
+    // document.getElementById("popup").classList.remove("showWrapper")
+  }
+
     const mapGallery = props.posts.map(obj => {
         return(
   
