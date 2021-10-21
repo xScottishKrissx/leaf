@@ -6,6 +6,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 
 import placeholderPlant from '../../../images/placeholderPlant.jpg'
 
+
 export const Gallery = (props) =>{
 
     const mapGallery = props.posts.map(obj => {

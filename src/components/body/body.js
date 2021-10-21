@@ -5,9 +5,7 @@ import './body.sass'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 
 import placeholderPlant from '../../images/placeholderPlant.jpg'
-import who1 from '../../images/who_1.png'
-import who2 from '../../images/who_2.png'
-import who3 from '../../images/who_3.png'
+
 
 
 import Gallery from './gallery/gallery'
@@ -28,28 +26,7 @@ export const Body = (props) => {
                     <BlogGallery />
 
   
-        <Row className="bodySection2">
 
-          <Col lg={12}>
-            <h1>Who are Leaf.com?</h1>
-              <Row className="sectionContentWrapper m-0">
-                <Col>
-                  <img src={who1} />
-                  <p>Database</p>
-                </Col>
-
-                <Col>
-                  <img src={who2} />
-                  <p>Preservation</p>
-                </Col>
-
-                <Col>
-                  <img src={who3} />
-                  <p>Knowledge</p>
-                </Col>
-              </Row>
-          </Col>
-        </Row>
 
 
         <Row className="bodySection3">
