@@ -95,25 +95,7 @@ export default class BlogIndex extends React.Component {
       <Body />
       <Footer />
       
-      <Container fluid >
-  
-  
-        <Row className="header"> 
-          <Col >
-            <div className="section1">
-              <span className="heroImage"></span>
-              <div>
-                <span>welcome to</span>
-                <h1>leaf.com </h1>
-                <img src={leaf} />
-              </div>
-            </div>
-          </Col>
-        </Row>
-  
-  
-  
-      </Container>
+
 
 
       <Container className="bodyContent" fluid="lg">
