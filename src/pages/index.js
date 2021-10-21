@@ -10,8 +10,18 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 import leaf from '../images/leaf.png'
+
 import placeholderPlant from '../images/placeholderPlant.jpg'
-import { Button, Container,Row, Col } from 'react-bootstrap';
+import who1 from '../images/who_1.png'
+import who2 from '../images/who_2.png'
+import who3 from '../images/who_3.png'
+
+import { Button, Container,Row, Col, Stack } from 'react-bootstrap';
+import Modal from 'react-bootstrap/Modal'
+import MyModal from "../components/modal"
+import Header from "../components/header/header"
+import Body from "../components/body/body"
+import Footer from "../components/footer/footer"
 
 export default class BlogIndex extends React.Component {
 
@@ -24,52 +34,67 @@ export default class BlogIndex extends React.Component {
     window.addEventListener('scroll', this.scroll);      
 }
 
-  showPopup(id){
-    console.log("Show Popup " + id)
-    document.getElementById("popup").classList.add("showWrapper")
+  showPopup(title,body){
+    // console.log("Show Popup " + id)
+    // document.getElementById("popup").classList.add("showWrapper")
   }
   hidePopup(){
-    console.log("Hide Popup")
-    document.getElementById("popup").classList.remove("showWrapper")
+    // console.log("Hide Popup")
+    // document.getElementById("popup").classList.remove("showWrapper")
   }
 
-  scroll = (e) =>{
-      const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
-      const body = document.body;
-      const html = document.documentElement;
-      const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
+  // scroll = (e) =>{
+  //     const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+  //     const body = document.body;
+  //     const html = document.documentElement;
+  //     const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
 
-      const windowBottom = windowHeight + window.pageYOffset;
-      if(windowBottom >= docHeight ){
-          this.setState({
-              counter:this.state.counter + 1
-          })
-          return;
-      }
-  }
-  
+  //     const windowBottom = windowHeight + window.pageYOffset;
+  //     if(windowBottom >= docHeight ){
+  //         this.setState({
+  //             counter:this.state.counter + 1
+  //         })
+  //         return;
+  //     }
+  // }
+
+
+
+
 
 
   render(){
+
+
     console.log(this.state.counter)
     const siteTitle = this.props.data.site.siteMetadata?.title || `Title`
-    const posts = this.state.galleryArray.slice(0, this.state.counter)
+    const posts = this.state.galleryArray
     console.log(posts)
 
     const mapGallery = posts.map(obj => {
       return(
 
-      
-      <Col md={3} sm={6} onClick={()=>this.showPopup(1)}>
-        <img src={placeholderPlant} />
-        <h3>Title:{obj.frontmatter.title}</h3>
-        <span>laternus nameinus</span>
+
+      <Col xl={4} md={6} sm={6} onClick={()=>this.showPopup(obj.frontmatter.title,obj.frontmatter.title)}>
+        <div>
+          <img src={placeholderPlant} />
+          <div>
+            <h3>{obj.frontmatter.title}</h3>
+            <span>laternus nameinus</span>
+          </div>
+        </div>
+
+
       </Col>
       )
     })
 
     return (
       <>
+      <Header />
+      <Body />
+      <Footer />
+      
       <Container fluid >
   
   
@@ -82,7 +107,6 @@ export default class BlogIndex extends React.Component {
                 <h1>leaf.com </h1>
                 <img src={leaf} />
               </div>
-  
             </div>
           </Col>
         </Row>
@@ -90,69 +114,21 @@ export default class BlogIndex extends React.Component {
   
   
       </Container>
-  
+
+
       <Container className="bodyContent" fluid="lg">
         <Row className="bodySection1">
   
           <Col lg={12}>
             <div>
               <h1>Plant Gallery</h1>
-
-              <Row className="itemWrapper" >
-                <span>MapGallery</span>
-                {mapGallery}
-                <Col md={3} sm={6} onClick={()=>this.showPopup(1)}>
-                  <img src={placeholderPlant} />
-                  <h3>Title</h3>
-                  <span>laternus nameinus</span>
-                </Col>
-  
-                <Col md={3} sm={6} onClick={()=>this.showPopup(2)}>
-                  <img src={placeholderPlant} />
-                  <h3>Title</h3>
-                  <span>laternus nameinus</span>
-                </Col>
-  
-                <Col md={3} sm={6} onClick={()=>this.showPopup(3)}>
-                  <img src={placeholderPlant} />
-                  <h3>Title</h3>
-                  <span>laternus nameinus</span>
-                </Col>
-  
-                <Col md={3} sm={6}>
-                  <img src={placeholderPlant} />
-                  <h3>Title</h3>
-                  <span>laternus nameinus</span>
-                </Col>
-  
-                <Col md={3} sm={6}>
-                  <img src={placeholderPlant} />
-                  <h3>Title</h3>
-                  <span>laternus nameinus</span>
-                </Col>
-  
-                <Col md={3} sm={6}>
-                  <img src={placeholderPlant} />
-                  <h3>Title</h3>
-                  <span>laternus nameinus</span>
-                </Col>
-  
-                <Col md={3} sm={6}>
-                  <img src={placeholderPlant} />
-                  <h3>Title</h3>
-                  <span>laternus nameinus</span>
-                </Col>
-  
-                <Col md={3} sm={6} >
-                  <img src={placeholderPlant} />
-                  <h3>Title</h3>
-                  <span>laternus nameinus</span>
-                </Col>
-              </Row>
+              <Row className="itemWrapper" > {mapGallery} </Row>
             </div>
           </Col>
+
+          
   
-          <div className="popupWrapper" id="popup" >
+          {/* <div className="popupWrapper" id="popup" >
             
             <div className="popupContent" onClick={null}>
   
@@ -167,27 +143,27 @@ export default class BlogIndex extends React.Component {
             </div>
             <div onClick={()=>this.hidePopup()} className="popupBackground" ></div>
           </div>
-  
+   */}
         </Row>
   
         <Row className="bodySection2">
 
           <Col lg={12}>
-            <h1>Section Header</h1>
-              <Row className="sectionContentWrapper">
+            <h1>Who are Leaf.com?</h1>
+              <Row className="sectionContentWrapper m-0">
                 <Col>
-                  <img src={placeholderPlant} />
-                  <p>Descriptive Text</p>
+                  <img src={who1} />
+                  <p>Database</p>
                 </Col>
 
                 <Col>
-                  <img src={placeholderPlant} />
-                  <p>Descriptive Text</p>
+                  <img src={who2} />
+                  <p>Preservation</p>
                 </Col>
 
                 <Col>
-                  <img src={placeholderPlant} />
-                  <p>Descriptive Text</p>
+                  <img src={who3} />
+                  <p>Knowledge</p>
                 </Col>
               </Row>
           </Col>
@@ -197,14 +173,39 @@ export default class BlogIndex extends React.Component {
         <Row className="bodySection3">
 
           <Col lg={12}>
-            <h1>Section Header</h1>
-              <Row className="sectionContentWrapper">
-                <Col><p>Descriptive Text</p></Col>
-                <Col md={7}><img src={placeholderPlant} /></Col>
+            <h1>Plant Uses</h1>
+              <Row className="sectionContentWrapper upper m-0 mb-3 ">
+
+                <Col id="forcePaddingRight" md={6} className="d-flex justify-content-center justify-content-md-end">
+                  <img src={placeholderPlant} />
+                </Col>
+
+                <Col md={6} className="d-flex justify-content-center align-items-center">
+                  <div className="p-5">
+                    <h2>Edible</h2>
+                    <p>Plants bring homes to life, and they also bring life to your office. Adding plants into your space also helps to create a relaxing environment.</p>
+                    <p>Plants bring homes to life, and they also bring life to your office. Adding plants into your space also helps to create a relaxing environment.</p>
+                    <Button variant="success">Success</Button>
+                  </div>
+                </Col>
+              
+
               </Row>
-              <Row className="sectionContentWrapper">
-                <Col md={7}><img src={placeholderPlant} /></Col>
-                <Col ><p>Descriptive Text</p></Col>
+
+              <Row className="sectionContentWrapper m-0 lower">
+                <Col id="forcePaddingLeft" md={6} className="d-flex justify-content-center justify-content-md-start">
+                  <img src={placeholderPlant} />
+                </Col>
+        
+                <Col md={6} className="d-flex justify-content-center align-items-center">
+                  <div className="p-5">
+                    <h2>Medicinal</h2>
+                    <p>We've gathered some of our most popular plants into sets to suit all types of plant parent, including those who need a bit of extra inspiration.</p>
+                    <p>Find your match</p>
+                    <Button variant="success">Success</Button>
+                  </div>
+                </Col>
+
               </Row>
           </Col>
 
@@ -215,28 +216,36 @@ export default class BlogIndex extends React.Component {
           <Col lg={12}>
             <h1>Blog Pages</h1>
               <Row className="sectionContentWrapper">
-                <Col>
-                  <img src={placeholderPlant} />
-                  <p>Blog Title</p>
-                  <p>Blog Copy</p>
+                <Col sm={6} lg={3}>
+                  <div className="pb-3">
+                    <img src={placeholderPlant} />
+                    <p>Blog Title</p>
+                    <p>Blog Copy</p>
+                  </div>
                 </Col>
 
-                <Col>
-                  <img src={placeholderPlant} />
-                  <p>Blog Title</p>
-                  <p>Blog Copy</p>
+                <Col sm={6} lg={3}>
+                  <div>
+                    <img src={placeholderPlant} />
+                    <p>Blog Title</p>
+                    <p>Blog Copy</p>
+                  </div>
                 </Col>
 
-                <Col>
-                  <img src={placeholderPlant} />
-                  <p>Blog Title</p>
-                  <p>Blog Copy</p>
+                <Col sm={6} lg={3}>
+                  <div>
+                    <img src={placeholderPlant} />
+                    <p>Blog Title</p>
+                    <p>Blog Copy</p>
+                  </div>
                 </Col>
 
-                <Col>
-                  <img src={placeholderPlant} />
-                  <p>Blog Title</p>
-                  <p>Blog Copy</p>
+                <Col sm={6} lg={3}>
+                  <div>
+                    <img src={placeholderPlant} />
+                    <p>Blog Title</p>
+                    <p>Blog Copy</p>
+                  </div>
                 </Col>
               </Row>
           </Col>
@@ -245,10 +254,14 @@ export default class BlogIndex extends React.Component {
   
       </Container>
 
-      <Container fluid className="footer">
+      <Container fluid="lg" className="footer">
   
         <Row className="justify-content-lg-center">
-          <Col lg="12"><h1>Footer</h1></Col>
+          <Col lg="12">
+               <div>
+                <img src={leaf} />
+               </div>
+          </Col>
         </Row>
 
   

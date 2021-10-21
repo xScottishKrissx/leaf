@@ -2,9 +2,29 @@
 
 *
     // outline: 1px solid black
-    
 
+
+    
+/////////////////////////////////////// Variables
 $borderRadius: 20px
+$boxShadow: 0px 5px 0px 0px #0000002e
+$overallBackgroundColour: #e8e7e2
+// The beige like colour
+$primaryColour: #d6d3ca
+///////////////////////////////////// Mixins
+@mixin defaultBoxAppearance
+    background-color: $primaryColour
+    border-radius: $borderRadius
+    box-shadow: $boxShadow
+    
+//
+
+
+
+#gatsby-focus-wrapper
+    background-color: $overallBackgroundColour
+
+
 .header
     div
         margin: 0 auto
@@ -39,10 +59,10 @@ $borderRadius: 20px
 
 
 .bodyContent
-    outline: 1px solid black
+    // outline: 1px solid black
     .row
         div
-            margin: 0 auto
+            // margin: 0 auto
 
     .bodySection1
         margin-bottom: 50px
@@ -50,35 +70,38 @@ $borderRadius: 20px
         div
             div
                 .itemWrapper
-                    outline: 1px solid green
-                    div
-                        cursor: pointer
-                        display: flex
-                        flex-direction: column
-                        align-items: center
-                        justify-content: center
+                    >div
+                        >div
+                            @include defaultBoxAppearance
+                            flex-direction: row
+                            width: 100%
+                            display: flex
+                            align-items: center
+                            margin-top: 20px
 
-                        height: 250px
-                        outline: 1px solid red
-                        // position: relative
-                        span
-                            width: 90%
-                            // outline: 1px solid black
-                            text-align: center
-                            color: grey
-                        img
-                            border-radius: $borderRadius
-                            height: 150px
-                        h3
-                            margin: 0
+                            img
+                                border-radius: $borderRadius
+                                height: 150px
+                            div
+                                flex-direction: column
+                                padding: 10px
+                                h3
+                                    font-size: 1.5rem
+                                    margin: 0
+                                span
+                                    width: 90%
+                                    color: grey
+
     .bodySection2
         margin-bottom: 50px
         margin-top: 50px
         div
             h1
-                text-align: center
             .sectionContentWrapper
-                text-align: center
+                background-color: $primaryColour
+                border-radius: $borderRadius
+                box-shadow: $boxShadow
+
                 div
                     text-align: center
                     img
@@ -87,14 +110,26 @@ $borderRadius: 20px
     .bodySection3
         margin-bottom: 50px
         margin-top: 50px
+        // outline: 1px solid black
         div
+            // outline: 1px solid black
             h1
-                text-align: center
+            .upper
+                flex-direction: row-reverse
             .sectionContentWrapper
-                text-align: center
+                // background: linear-gradient(90deg, #e8e7e2 0%, #d6d3ca 100%)
+                @include defaultBoxAppearance
+
                 div
                     img
-                        height: 300px
+                        border-radius: 20px
+                        height: 500px
+
+                #forcePaddingRight
+                    padding-right: 0 !important
+                #forcePaddingLeft
+                    padding-left: 0 !important
+
     .bodySection4
         margin-bottom: 50px
         margin-top: 50px
@@ -102,16 +137,37 @@ $borderRadius: 20px
             h1
             .sectionContentWrapper
                 div
-                    img
-                        height: 300px
+                    div
+                        @include defaultBoxAppearance
+                        padding-bottom: 10px
+                    
+                        img
+                            height: auto
+                            width: 100%
+                            border-radius: 20px
+                        p
+                            margin-left: 10px
+                            margin-top: 10px
+
 .footer
-    background-color: red
+    background-color: $overallBackgroundColour
+    padding-bottom: 40px
+
     div
-        background-color: green
-        outline: 1px solid red
+        // background-color: green
+        // outline: 1px solid red
         div
-            background-color: white 
             max-width: 1320px
+            div
+                @include defaultBoxAppearance
+                display: flex
+                justify-content: center
+                align-items: center
+                img
+                    height: 100px
+                    opacity: 0.5
+                    padding: 20px
+
 
 
 
