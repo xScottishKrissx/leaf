@@ -29,46 +29,7 @@ export const Body = (props) => {
 
 
 
-        <Row className="bodySection3">
 
-          <Col lg={12}>
-            <h1>Plant Uses</h1>
-              <Row className="sectionContentWrapper upper m-0 mb-3 ">
-
-                <Col id="forcePaddingRight" md={6} className="d-flex justify-content-center justify-content-md-end">
-                  <img src={placeholderPlant} />
-                </Col>
-
-                <Col md={6} className="d-flex justify-content-center align-items-center">
-                  <div className="p-5">
-                    <h2>Edible</h2>
-                    <p>Plants bring homes to life, and they also bring life to your office. Adding plants into your space also helps to create a relaxing environment.</p>
-                    <p>Plants bring homes to life, and they also bring life to your office. Adding plants into your space also helps to create a relaxing environment.</p>
-                    <Button variant="success">Success</Button>
-                  </div>
-                </Col>
-              
-
-              </Row>
-
-              <Row className="sectionContentWrapper m-0 lower">
-                <Col id="forcePaddingLeft" md={6} className="d-flex justify-content-center justify-content-md-start">
-                  <img src={placeholderPlant} />
-                </Col>
-        
-                <Col md={6} className="d-flex justify-content-center align-items-center">
-                  <div className="p-5">
-                    <h2>Medicinal</h2>
-                    <p>We've gathered some of our most popular plants into sets to suit all types of plant parent, including those who need a bit of extra inspiration.</p>
-                    <p>Find your match</p>
-                    <Button variant="success">Success</Button>
-                  </div>
-                </Col>
-
-              </Row>
-          </Col>
-
-        </Row>
 
         <Row className="bodySection4">
 
