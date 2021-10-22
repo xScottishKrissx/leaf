@@ -8,10 +8,12 @@ import placeholderPlant from '../../../images/placeholderPlant.jpg'
 
 
 export const Gallery = (props) =>{
+  console.log(props.posts)
 
-  function showPopup(title,body){
-    // console.log("Show Popup " + id)
-    // document.getElementById("popup").classList.add("showWrapper")
+  function showPopup(e,title,body){
+    // console.log(e.currentTarget.getElementsByTagName("div")[0])
+    // This works
+    e.currentTarget.getElementsByTagName("div")[0].classList.add("showWrapper")
   }
   function hidePopup(){
     // console.log("Hide Popup")
@@ -19,10 +21,11 @@ export const Gallery = (props) =>{
   }
 
     const mapGallery = props.posts.map(obj => {
+      // console.log(obj.frontmatter.title)
         return(
   
   
-        <Col xl={4} md={6} sm={6} onClick={()=>this.showPopup(obj.frontmatter.title,obj.frontmatter.title)}>
+        <Col xl={4} md={6} sm={6} onClick={(e)=>showPopup(e, obj.frontmatter.title,obj.frontmatter.title)}>
           <div className="d-flex flex-row align-items-center w-100 mt-4">
             <img src={placeholderPlant} />
             <div className="p-3">

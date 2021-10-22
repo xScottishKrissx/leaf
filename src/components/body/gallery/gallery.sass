@@ -3,7 +3,10 @@
 .galleryItemWrapper
     >div
         >div
-
+            // transition: 1s 
+            cursor: pointer
+            &:hover
+                // box-shadow: 0px 0px 0px 0px #0000002e
             @include v.defaultBoxAppearance
 
             img
@@ -60,7 +63,22 @@
                 padding: 20px
                 background-color: orange
 
-        .showWrapper
-            left: 0%
-        .hideWrapper
-            left: -10000000000%
+.showWrapper
+    // box-shadow: 0px 0px 0px 0px #0000002e !important
+    // margin-top: 1.6rem !important
+    animation: clickTest 1s
+    animation-fill-mode: forwards
+
+    // @keyframes clickTest
+    //     0%
+    //         box-shadow: 0px 5px 0px 0px #0000002e
+
+    //     50%
+    //         box-shadow: 0px 0px 0px 0px #0000002e
+
+    //     100%
+    //         box-shadow: 0px 5px 0px 0px #0000002e
+
+    
+.hideWrapper
+    left: -10000000000%

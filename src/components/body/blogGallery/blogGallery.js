@@ -14,7 +14,7 @@ export const BlogGallery = (props) =>{
           <Col lg={12}>
             <h1>Blog Pages</h1>
               <Row className="blogGalleryItemWrapper">
-                <Col sm={6} lg={3}>
+                <Col sm={6} lg={3} className="mb-3">
                   <div className="pb-3">
                     <img className="w-100" src={placeholderPlant} />
                     <p className="m-2">Blog Title</p>
@@ -22,7 +22,7 @@ export const BlogGallery = (props) =>{
                   </div>
                 </Col>
 
-                <Col sm={6} lg={3}>
+                <Col sm={6} lg={3} className="mb-3">
                   <div className="pb-3">
                     <img className="w-100" src={placeholderPlant} />
                     <p className="m-2">Blog Title</p>
@@ -30,7 +30,7 @@ export const BlogGallery = (props) =>{
                   </div>
                 </Col>
 
-                <Col sm={6} lg={3}>
+                <Col sm={6} lg={3} className="mb-3">
                   <div className="pb-3">
                     <img className="w-100" src={placeholderPlant} />
                     <p className="m-2">Blog Title</p>
@@ -38,7 +38,7 @@ export const BlogGallery = (props) =>{
                   </div>
                 </Col>
 
-                <Col sm={6} lg={3}>
+                <Col sm={6} lg={3} className="mb-3">
                   <div className="pb-3">  
                     <img className="w-100" src={placeholderPlant} />
                     <p className="m-2">Blog Title</p>

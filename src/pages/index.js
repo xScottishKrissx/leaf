@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useState, useEffect, useRef } from "react"
+import { getPlants } from "../utils/plants"
 
 import './index.sass'
 
@@ -42,6 +43,7 @@ export default class BlogIndex extends React.Component {
 
 
   componentDidMount(){
+    getPlants()
     if(typeof window !== 'undefined')this.setState({isBrowser: true})
     if(this.state.isBrowser) window.addEventListener('scroll', this.scroll);   
   }
@@ -278,6 +280,7 @@ export const pageQuery = graphql`
           title
           description
         }
+        id
       }
     }
   }
