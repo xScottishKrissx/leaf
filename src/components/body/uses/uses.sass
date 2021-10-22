@@ -1,0 +1,15 @@
+@use '../../../_variables' as v
+
+.usesRow
+    // background: linear-gradient(90deg, #e8e7e2 0%, #d6d3ca 100%)
+    @include v.defaultBoxAppearance
+
+    div
+        img
+            border-radius: v.$borderRadius
+            height: 500px
+
+    #forcePaddingRight
+        padding-right: 0 !important
+    #forcePaddingLeft
+        padding-left: 0 !important

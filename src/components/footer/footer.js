@@ -9,12 +9,12 @@ import leaf from '../../images/leaf.png'
 export const Footer = (props) =>{
     
 return(
-    <Container fluid="lg" className="footer">
+    <Container fluid="lg" className="footer pb-4">
   
     <Row className="justify-content-lg-center">
       <Col lg="12">
-           <div>
-            <img src={leaf} />
+           <div className="d-flex justify-content-center align-items-center">
+              <img className="p-3" src={leaf} />
            </div>
       </Col>
     </Row>

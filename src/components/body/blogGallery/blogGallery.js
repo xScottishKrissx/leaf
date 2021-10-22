@@ -9,40 +9,40 @@ import placeholderPlant from '../../../images/placeholderPlant.jpg'
 export const BlogGallery = (props) =>{
     
     return(
-        <Row className="bodySection4">
+        <Row className="bodySection4 my-5">
 
           <Col lg={12}>
             <h1>Blog Pages</h1>
-              <Row className="sectionContentWrapper">
+              <Row className="blogGalleryItemWrapper">
                 <Col sm={6} lg={3}>
                   <div className="pb-3">
-                    <img src={placeholderPlant} />
-                    <p>Blog Title</p>
-                    <p>Blog Copy</p>
+                    <img className="w-100" src={placeholderPlant} />
+                    <p className="m-2">Blog Title</p>
+                    <p className="m-2">Blog Copy</p>
                   </div>
                 </Col>
 
                 <Col sm={6} lg={3}>
-                  <div>
-                    <img src={placeholderPlant} />
-                    <p>Blog Title</p>
-                    <p>Blog Copy</p>
+                  <div className="pb-3">
+                    <img className="w-100" src={placeholderPlant} />
+                    <p className="m-2">Blog Title</p>
+                    <p className="m-2">Blog Copy</p>
                   </div>
                 </Col>
 
                 <Col sm={6} lg={3}>
-                  <div>
-                    <img src={placeholderPlant} />
-                    <p>Blog Title</p>
-                    <p>Blog Copy</p>
+                  <div className="pb-3">
+                    <img className="w-100" src={placeholderPlant} />
+                    <p className="m-2">Blog Title</p>
+                    <p className="m-2">Blog Copy</p>
                   </div>
                 </Col>
 
                 <Col sm={6} lg={3}>
-                  <div>
-                    <img src={placeholderPlant} />
-                    <p>Blog Title</p>
-                    <p>Blog Copy</p>
+                  <div className="pb-3">  
+                    <img className="w-100" src={placeholderPlant} />
+                    <p className="m-2">Blog Title</p>
+                    <p className="m-2">Blog Copy</p>
                   </div>
                 </Col>
               </Row>

@@ -11,11 +11,11 @@ export const Uses = (props) =>{
 
     
 return(
-    <Row className="bodySection3">
+    <Row className="bodySection3 my-5">
 
     <Col lg={12}>
       <h1>Plant Uses</h1>
-        <Row className="sectionContentWrapper upper m-0 mb-3 ">
+        <Row className="usesRow flex-row-reverse m-0 mb-3 ">
 
           <Col id="forcePaddingRight" md={6} className="d-flex justify-content-center justify-content-md-end">
             <img src={placeholderPlant} />
@@ -33,7 +33,7 @@ return(
 
         </Row>
 
-        <Row className="sectionContentWrapper m-0 lower">
+        <Row className="usesRow m-0 lower">
           <Col id="forcePaddingLeft" md={6} className="d-flex justify-content-center justify-content-md-start">
             <img src={placeholderPlant} />
           </Col>

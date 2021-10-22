@@ -1,0 +1,66 @@
+@use '../../../_variables' as v
+
+.galleryItemWrapper
+    >div
+        >div
+
+            @include v.defaultBoxAppearance
+
+            img
+                border-radius: v.$borderRadius
+                height: 150px
+
+            div
+                h3
+                    font-size: 1.5rem
+                span
+                    color: grey
+
+
+
+
+
+// Custom Popup
+    .popupWrapper
+        // background-color: #00000059
+        display: flex
+        align-items: center
+        height: 100%
+        left: -10000000000%
+        padding: 0
+        position: fixed
+        width: 100%
+        top: 0%
+        // transform: translate(-50%, -50%)
+        .popupBackground
+            background-color: #00000059
+            cursor: pointer
+            height: 100%
+            // left: 0%
+            position: absolute
+            // top: 0%
+            width: 100%
+            z-index: 0
+
+        .popupContent
+            background-color: #407b53
+            border-radius: v.$borderRadius
+            display: flex
+            align-items: center
+            height: 500px
+            max-width: 900px
+            width: 90%
+            z-index: 10
+
+            .popupColumn1
+                width: 40%
+            .popupColumn2
+                width: 60%
+            div
+                padding: 20px
+                background-color: orange
+
+        .showWrapper
+            left: 0%
+        .hideWrapper
+            left: -10000000000%

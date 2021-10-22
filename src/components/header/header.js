@@ -12,13 +12,20 @@ export const Header  = (props) => {
         <Container fluid >  
             <Row className="header"> 
 
-                <Col >
+                <Col className="p-0">
 
-                    <div className="section1">
+                    <div className="
+                        section1 
+                        d-flex 
+                        flex-column
+                        justify-content-center 
+                        align-items-center
+                        position-relative
+                    ">
 
-                        <span className="heroImage"></span>
+                        <span className="heroImage w-100 h-100"></span>
 
-                        <div>
+                        <div className="position-absolute">
                             <span>welcome to</span>
                             <h1>leaf.com </h1>
                             <img src={leaf} />

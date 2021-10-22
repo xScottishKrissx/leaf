@@ -23,11 +23,11 @@ export const Gallery = (props) =>{
   
   
         <Col xl={4} md={6} sm={6} onClick={()=>this.showPopup(obj.frontmatter.title,obj.frontmatter.title)}>
-          <div>
+          <div className="d-flex flex-row align-items-center w-100 mt-4">
             <img src={placeholderPlant} />
-            <div>
-              <h3>{obj.frontmatter.title}</h3>
-              <span>laternus nameinus</span>
+            <div className="p-3">
+              <h3 className="m-0">{obj.frontmatter.title}</h3>
+              <span className="w-90">laternus nameinus</span>
             </div>
           </div>
   
@@ -37,14 +37,14 @@ export const Gallery = (props) =>{
     })
     
 return(
-    <Row className="bodySection1">
+    <Row className="my-5">
   
-    <Col lg={12}>
-      <div>
-        <h1>Plant Gallery</h1>
-        <Row className="itemWrapper" > {mapGallery} </Row>
-      </div>
-    </Col>
+      <Col lg={12}>
+        <div>
+          <h1>Plant Gallery</h1>
+          <Row className="galleryItemWrapper" > {mapGallery} </Row>
+        </div>
+      </Col>
 
     
 
