@@ -29,6 +29,7 @@ To-Do:
     ☐ Resist using flex in css, switch to using bootstrap syntax as much as possible
       ✔ Convert current code to css syntax @done(13:40 - 22/10/21)
         ✔ after splitting code into components. @done(13:40 - 22/10/21)
+    ☐ (Finally) get a gatsby cloud version working
   
   Section 1 -  Gallery:
     ✔ Get rows of 4 in place @done(18:29 - 21/10/21)

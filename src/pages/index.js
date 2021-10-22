@@ -20,7 +20,7 @@ export default class BlogIndex extends React.Component {
         counter:0,
         galleryArray:this.props.data.allMarkdownRemark.nodes
     }
-    window.addEventListener('scroll', this.scroll);      
+       
 }
 
   // scroll = (e) =>{
@@ -41,7 +41,10 @@ export default class BlogIndex extends React.Component {
 
 
 
-
+  componentDidMount(){
+    if(typeof window !== 'undefined')this.setState({isBrowser: true})
+    if(this.state.isBrowser) window.addEventListener('scroll', this.scroll);   
+  }
 
   render(){
 
