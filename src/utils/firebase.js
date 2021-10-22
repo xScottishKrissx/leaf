@@ -1,5 +1,7 @@
-import * as firebase from 'firebase/app';
-import "firebase/firestore";
+import firebase from 'firebase/compat/app';
+
+import 'firebase/compat/firestore'
+
 
 
 const config = {
@@ -14,9 +16,11 @@ const config = {
   };
 
 
-firebase.initializeApp(config)
+if (!firebase.apps.length) {
+    firebase.initializeApp(config)
+}
 
 
-const firestore = firebase.firestore()
+const db = firebase.firestore()
 
-export {firestore}
+export {db}
