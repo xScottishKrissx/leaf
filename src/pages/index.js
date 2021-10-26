@@ -1,14 +1,14 @@
 import * as React from "react"
-import { useState, useEffect, useRef } from "react"
-import { getPlants } from "../utils/plants"
+// import { useState, useEffect, useRef } from "react"
+// import { getPlants } from "../utils/plants"
 
 import './index.sass'
 
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import { Button, Container,Row, Col, Stack } from 'react-bootstrap';
-import Modal from 'react-bootstrap/Modal'
-import MyModal from "../components/modal"
+// import { Button, Container,Row, Col, Stack } from 'react-bootstrap';
+// import Modal from 'react-bootstrap/Modal'
+// import MyModal from "../components/modal"
 import Header from "../components/header/header"
 import Body from "../components/body/body"
 import Footer from "../components/footer/footer"
@@ -18,42 +18,23 @@ export default class BlogIndex extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-        counter:0,
         galleryArray:this.props.data.galleryPages.nodes
     }
        
 }
 
-  // scroll = (e) =>{
-  //     const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
-  //     const body = document.body;
-  //     const html = document.documentElement;
-  //     const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
 
-  //     const windowBottom = windowHeight + window.pageYOffset;
-  //     if(windowBottom >= docHeight ){
-  //         this.setState({
-  //             counter:this.state.counter + 1
-  //         })
-  //         return;
-  //     }
-  // }
 
 
 
 
   componentDidMount(){
-    getPlants()
     if(typeof window !== 'undefined')this.setState({isBrowser: true})
-    if(this.state.isBrowser) window.addEventListener('scroll', this.scroll);   
+    if(this.state.isBrowser) window.addEventListener('scroll', ()=>this.scroll);   
   }
 
   render(){
-    console.log(this.props.data)
-    const siteTitle = this.props.data.site.siteMetadata?.title || `Title`
     const posts = this.state.galleryArray
-    console.log(posts)
-
     return (
       <>
 
@@ -298,6 +279,7 @@ export const pageQuery = graphql`
             childImageSharp {
               gatsbyImageData
             }
+            id
           }
           latinName
           light

@@ -14,7 +14,7 @@ Notes:
       ☐ Similiar to foxhub it will list info about various plants
       ☐ The first section will list various plants that you can click on to display a popup that will show more information about that plant.
         ☐ As you scroll down the page more of these will appear
-        ☐ Each of these items should have a corresponding page you can go to
+      ☐ Each item should have a popup that appears on click
       
       ☐ That's all i have as an idea at the moment but im sure I can come up with other things to add here.
       ☐ Overall, i'm happy i have something up and running and was able to get back on track.
@@ -24,7 +24,9 @@ Notes:
 
   26/10/2021
   ☐ !help Everytime you change a query you NEED TO RESTART THE SERVER OR YOU WILL GET AN ERROR 
+  ☐ !help I have had to restart the server to get images to show up
   ☐ !help I am currently on Gatsby V3, not V4
+
 
 
 To-Do:
@@ -48,6 +50,8 @@ To-Do:
     ✔ posts isnt propegating into gallery @done(14:26 - 22/10/21)
       ✔ It was, i just didn't convert from ()=>this.show to ()=>show @done(14:26 - 22/10/21)
     ✔ I have finally got the query set up to output different pages depending on what I need. I went through messing with firebase and json before settling on using the blog folder to output what I need using queries. I'm not sure this is the most efficient or even correct way of doing this but Its progress. @done(11:40 - 26/10/21)
+    ☐ Populated gallery with items, now to make them appear on scroll
+      ☐ Load items on scroll
 
   Section 2 - Bio:
     ✔ Component Created @done(18:28 - 21/10/21)
@@ -56,6 +60,7 @@ To-Do:
   Section 3 - Uses:
     ✔ Component Created @done(18:28 - 21/10/21)
     ✔ Transfer sass @done(13:40 - 22/10/21)
+    ☐ Create pages
 
   Section 4 - Blog Gallery:
     ✔ Component Created @done(18:28 - 21/10/21)

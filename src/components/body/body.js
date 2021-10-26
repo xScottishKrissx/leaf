@@ -17,10 +17,10 @@ export const Body = (props) => {
 
         <div>
             <Container className="bodyContent" fluid="lg">
-                <Gallery posts={props.posts}/>
                 <Bio />
                 <Uses />
-                <BlogGallery />  
+                <BlogGallery /> 
+                <Gallery posts={props.posts}/> 
             </Container>
         </div>
     )
