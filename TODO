@@ -22,6 +22,10 @@ Notes:
   18/10/2021
   ☐ hortology.com has more or less the exact same design as i am currently building. I am going to carry on as the point is to practice the actual creation of the design than the originality. It will still be different but it uses the same large image at the top and the images that you can click on to view a modal with product details.
 
+  26/10/2021
+  ☐ !help Everytime you change a query you NEED TO RESTART THE SERVER OR YOU WILL GET AN ERROR 
+  ☐ !help I am currently on Gatsby V3, not V4
+
 
 To-Do:
   General:
@@ -30,6 +34,9 @@ To-Do:
       ✔ Convert current code to css syntax @done(13:40 - 22/10/21)
         ✔ after splitting code into components. @done(13:40 - 22/10/21)
     ✔ (Finally) get a gatsby cloud version working @done(14:08 - 22/10/21)
+
+
+
   
   Section 1 -  Gallery:
     ✔ Get rows of 4 in place @done(18:29 - 21/10/21)

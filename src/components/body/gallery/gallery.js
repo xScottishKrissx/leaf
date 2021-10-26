@@ -6,6 +6,8 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 
 import placeholderPlant from '../../../images/placeholderPlant.jpg'
 
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+
 
 export const Gallery = (props) =>{
   console.log(props.posts)
@@ -21,16 +23,20 @@ export const Gallery = (props) =>{
   }
 
     const mapGallery = props.posts.map(obj => {
-      // console.log(obj.frontmatter.title)
+      console.log(obj)
+      let imagePath = obj.frontmatter.image.childImageSharp.fluid
         return(
-  
   
         <Col xl={4} md={6} sm={6} onClick={(e)=>showPopup(e, obj.frontmatter.title,obj.frontmatter.title)}>
           <div className="d-flex flex-row align-items-center w-100 mt-4">
-            <img src={placeholderPlant} />
+            {/* <img src={placeholderPlant} /> */}
+            {/* <Img fluid={imagePath} /> */}
+            {/* <Img src={placeholderPlant}/> */}
+            <GatsbyImage image={getImage(obj.frontmatter.image)} alt="" />
             <div className="p-3">
-              <h3 className="m-0">{obj.frontmatter.title}</h3>
-              <span className="w-90">laternus nameinus</span>
+              <h3 className="m-0">{obj.frontmatter.commonName}</h3>
+              <span className="w-90">{obj.frontmatter.latinName}</span>
+              {/* <p>{obj.frontmatter.about}</p> */}
             </div>
           </div>
   

@@ -290,7 +290,21 @@ export const pageQuery = graphql`
     galleryPages: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/gallery/"}}) {
       nodes {
         frontmatter {
-          title
+          about
+          colour
+          commonName
+          family
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          latinName
+          light
+          maxHeight
+          maxTimeToGrow
+          nativeTo
+          water
         }
         fileAbsolutePath
       }
