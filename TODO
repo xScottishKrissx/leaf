@@ -40,6 +40,7 @@ To-Do:
     ✔ Transfer sass @done(13:40 - 22/10/21)
     ✔ posts isnt propegating into gallery @done(14:26 - 22/10/21)
       ✔ It was, i just didn't convert from ()=>this.show to ()=>show @done(14:26 - 22/10/21)
+    ✔ I have finally got the query set up to output different pages depending on what I need. I went through messing with firebase and json before settling on using the blog folder to output what I need using queries. I'm not sure this is the most efficient or even correct way of doing this but Its progress. @done(11:40 - 26/10/21)
 
   Section 2 - Bio:
     ✔ Component Created @done(18:28 - 21/10/21)

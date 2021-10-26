@@ -19,7 +19,7 @@ export default class BlogIndex extends React.Component {
     super(props);
     this.state = {
         counter:0,
-        galleryArray:this.props.data.allMarkdownRemark.nodes
+        galleryArray:this.props.data.galleryPages.nodes
     }
        
 }
@@ -49,7 +49,7 @@ export default class BlogIndex extends React.Component {
   }
 
   render(){
-
+    console.log(this.props.data)
     const siteTitle = this.props.data.site.siteMetadata?.title || `Title`
     const posts = this.state.galleryArray
     console.log(posts)
@@ -263,13 +263,16 @@ export default class BlogIndex extends React.Component {
 // export default BlogIndex
 
 export const pageQuery = graphql`
+
   query {
+    
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+
+    someEntries: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt
         fields {
@@ -283,5 +286,24 @@ export const pageQuery = graphql`
         id
       }
     }
+
+    galleryPages: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/gallery/"}}) {
+      nodes {
+        frontmatter {
+          title
+        }
+        fileAbsolutePath
+      }
+    }
+
+    blogPages: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/blogPages/"}}) {
+      nodes {
+        frontmatter {
+          title
+        }
+        fileAbsolutePath
+      }
+    }
+
   }
 `
