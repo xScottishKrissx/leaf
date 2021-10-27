@@ -1,9 +1,15 @@
 import * as React from 'react'
 import './gallery.sass'
-import {  Row, Col } from 'react-bootstrap'
+import {  Button, Row, Col, CloseButton } from 'react-bootstrap'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useState } from 'react'
 
+import { BiWorld } from 'react-icons/bi'
+import { BsBrightnessHigh, BsDropletFill } from 'react-icons/bs';
+import {IoMdTimer} from 'react-icons/io'
+import {IoColorPaletteOutline} from 'react-icons/io5'
+import {VscSymbolRuler} from 'react-icons/vsc'
+import {GoLinkExternal} from 'react-icons/go'
 
 export const Gallery = (props) =>{
   const [plantInfo, setPlantInfo] = useState([])
@@ -23,7 +29,14 @@ export const Gallery = (props) =>{
   function hidePopup(){
     // console.log("Hide Popup")
     document.getElementById("popup").classList.remove("showWrapper")
+    document.getElementById("fullPageMsg").classList.remove("showMsg")
+
     document.getElementById("popup").classList.add("hideWrapper")
+  }
+
+  function showMsg(){
+    console.log("showMsg")
+    document.getElementById("fullPageMsg").classList.add("showMsg")
   }
 
     const mapGallery = props.posts.map(obj => {
@@ -55,21 +68,58 @@ return(
       </Col>
 
     
-      {plantInfo.length > 0 ? <p>Show</p> : <p>Dont Show</p>}
+      
         <div className="popupWrapper d-flex align-items-center justify-content-center position-fixed h-100 w-100 p-0" id="popup" >
-        
-        <div className="popupContent d-flex align-items-center w-100" onClick={null}>
+          
+          <Row className="popupContent d-flex w-100" onClick={null}>
+          <CloseButton id="closePopupBtn" onClick={()=>hidePopup()} aria-label="Hide" className="bottom-sm-0 left-sm-0"  />
+              <Col sm={4} md={6} className="popupColumn1 p-0">
 
-            <div className="popupColumn1">
-            <h1>Image</h1>
-            </div>
-            <div className="popupColumn2">
-            <h1>{plantInfo.commonName}</h1>
-            <h2>Text</h2>
-            </div>
+                <GatsbyImage image={getImage((plantInfo.image))} alt="" className="w-100" />
 
-        </div>
-        <div onClick={()=>hidePopup()} className="popupBackground position-absolute h-100 w-100" ></div>
+                <div className="d-flex justify-content-evenly">
+
+                  <div sm={6} className="d-flex flex-column">
+                    <span title="Light Levels"><BsBrightnessHigh /> {plantInfo.light}</span>
+                    <span title="Water Requirements"><BsDropletFill />{plantInfo.water}</span>
+                    <span title="Colours"><IoColorPaletteOutline />{plantInfo.colour}</span>
+                  </div>
+
+                  <div sm={6} className="d-flex flex-column">
+                    <span title="Maximum Height"><VscSymbolRuler />{plantInfo.maxHeight}</span>
+                    <span title="Maximum time to full height"><IoMdTimer />{plantInfo.maxTimeToGrow}</span>
+                    <span title="Native To"><BiWorld />{plantInfo.nativeTo}</span>             
+                  </div>
+
+                </div>
+
+              </Col>
+
+              <Col sm={8} md={6} className="popupColumn2 d-flex flex-column align-items-center justify-content-center">
+                <Row>
+                  <Col className="text-center">                
+                  <h1 id="commonName">{plantInfo.commonName}</h1>
+                  <h4 id="latinName">{plantInfo.latinName}</h4>
+                  <h5 id="family">{plantInfo.family}</h5>
+                  </Col>
+                </Row>
+
+                <Row>
+                  <Col>
+                    <p id="about">{plantInfo.about}</p>
+                  </Col>
+                </Row>
+
+                
+              </Col>
+              {/* <CloseButton className="fullPageLink" onClick={()=>hidePopup()} aria-label="Hide" /> */}
+              <Button className="fullPageLink" onClick={()=>showMsg()} variant="primary"><GoLinkExternal /></Button>
+              <div id="fullPageMsg"><p>This is when you would be taken to a full separate page</p></div>
+              
+          </Row>
+
+          <div onClick={()=>hidePopup()} className="popupBackground position-absolute h-100 w-100" ></div>
+
         </div>
    
   </Row>

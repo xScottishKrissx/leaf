@@ -38,20 +38,111 @@
       z-index: 0
 
     .popupContent
-        background-color: #407b53
-        border-radius: v.$borderRadius
-        height: 500px
+        @include v.defaultBoxAppearance
+        background-color: #407b53 
+        // height: 500px
         max-width: 900px
+        position: relative
         z-index: 10
-
-        .popupColumn1
-            width: 40%
-        .popupColumn2
-            width: 60%
-        div
+    
+        #closePopupBtn
+            background-color: v.$primaryColour
+            border-top-right-radius: v.$borderRadius
             padding: 20px
-            background-color: orange
+            position: absolute
+            top: 0
+            right: 0
+            z-index: 20
+            &:focus
+                box-shadow: 0 0 0 0.25rem #000
 
+        .fullPageLink
+            background-color: v.$primaryColour
+            border-bottom-right-radius: v.$borderRadius
+            border: none
+            box-sizing: content-box
+            color: #000
+            opacity: 0.5
+            padding: 20px
+            position: absolute
+            bottom: 0
+            right: 0
+            width: 1em
+            &:hover
+                text-decoration: none
+                opacity: .75
+            &:focus
+                box-shadow: 0 0 0 0.25rem #000
+
+        #fullPageMsg
+            text-align: right
+            position: absolute
+            bottom: 20px
+            background-color: #3a3a3a
+            color: white
+            border-radius: 20px
+            opacity: 0
+            width: auto
+            right: 0
+            z-index: -10
+            p
+                margin: 0
+                padding: 10px
+
+
+            
+        .popupColumn1
+            // background-color: red
+            border-bottom-left-radius: v.$borderRadius
+            border-top-left-radius: v.$borderRadius
+            // width: 40%
+            .gatsby-image-wrapper
+                max-height: 600px
+
+            >div
+              border-top-left-radius: 20px
+              div
+                  span
+                      display: flex
+                      align-items: center
+                      margin-bottom: 20px
+                      margin-top: 20px
+                      
+                      svg
+                          font-size: 30px
+                          margin-right: 5px
+
+        .popupColumn2
+            // background-color: orange
+            border-bottom-right-radius: v.$borderRadius
+            border-top-right-radius: v.$borderRadius
+            padding: 20px
+            // width: 60%
+            #commonName
+                font-size: 3.5rem
+                font-weight: bold
+            #latinName
+                font-size: 2rem
+                font-style: italic
+                margin-top: 20px
+            #family
+                font-size: 1.5rem
+                margin-bottom: 20px
+                margin-top: 20px
+            #about
+                font-size: 20px
+
+        div
+            // padding: 20px
+            // background-color: orange
+
+
+
+
+
+
+
+// Animations
 .showWrapper
     // box-shadow: 0px 0px 0px 0px #0000002e !important
     // margin-top: 1.6rem !important
@@ -91,3 +182,28 @@
             opacity: 0
         100%
             transform: scale(0)
+
+
+.showMsg
+    animation: showMsg 2s
+    animation-fill-mode: forwards
+
+    @keyframes showMsg 
+        0%
+            opacity: 0
+            bottom: 20px
+        100%
+            opacity: 1
+            bottom: -50px
+
+    p
+        animation: fadeText 2s
+        animation-fill-mode: forwards
+        opacity: 0
+        @keyframes fadeText 
+            0%
+                opacity: 0
+            90%
+                opacity: 0
+            100%
+                opacity: 1
