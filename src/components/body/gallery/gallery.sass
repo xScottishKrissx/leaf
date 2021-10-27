@@ -27,61 +27,67 @@
 
 
 // Custom Popup
-    .popupWrapper
-        // background-color: #00000059
-        display: flex
-        align-items: center
-        height: 100%
-        left: -10000000000%
-        padding: 0
-        position: fixed
-        width: 100%
-        top: 0%
-        // transform: translate(-50%, -50%)
-        .popupBackground
-            background-color: #00000059
-            cursor: pointer
-            height: 100%
-            // left: 0%
-            position: absolute
-            // top: 0%
-            width: 100%
-            z-index: 0
+.popupWrapper
+    transform: scale(0)
+    // background-color: #00000059
+    left: 0%
+    top: 0%
+    .popupBackground
+      // background-color: #00000059
+      cursor: pointer
+      z-index: 0
 
-        .popupContent
-            background-color: #407b53
-            border-radius: v.$borderRadius
-            display: flex
-            align-items: center
-            height: 500px
-            max-width: 900px
-            width: 90%
-            z-index: 10
+    .popupContent
+        background-color: #407b53
+        border-radius: v.$borderRadius
+        height: 500px
+        max-width: 900px
+        z-index: 10
 
-            .popupColumn1
-                width: 40%
-            .popupColumn2
-                width: 60%
-            div
-                padding: 20px
-                background-color: orange
+        .popupColumn1
+            width: 40%
+        .popupColumn2
+            width: 60%
+        div
+            padding: 20px
+            background-color: orange
 
 .showWrapper
     // box-shadow: 0px 0px 0px 0px #0000002e !important
     // margin-top: 1.6rem !important
     animation: clickTest 1s
     animation-fill-mode: forwards
+    // left: 0
 
-    // @keyframes clickTest
-    //     0%
-    //         box-shadow: 0px 5px 0px 0px #0000002e
+    @keyframes clickTest
+        0%
+            transform: scale(0)
+            opacity: 0
 
-    //     50%
-    //         box-shadow: 0px 0px 0px 0px #0000002e
+        80%
+            transform: scale(1)
+        
+        90%
+            opacity: 1
 
-    //     100%
-    //         box-shadow: 0px 5px 0px 0px #0000002e
+        100%
+            transform: scale(1)
 
     
 .hideWrapper
-    left: -10000000000%
+    animation: hideWrapper 1s
+    animation-fill-mode: forwards
+    // left: 0
+    .popupBackground
+        opacity: 0
+    @keyframes hideWrapper
+        0%
+            transform: scale(1)
+            opacity: 1
+        50%
+            transform: scale(0)
+            opacity: 0
+        99%
+            opacity: 0
+        100%
+            transform: scale(0)
