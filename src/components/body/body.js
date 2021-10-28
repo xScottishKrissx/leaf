@@ -11,7 +11,7 @@ import BlogGallery from './blogGallery/blogGallery'
 
 export const Body = (props) => {
 
-
+console.log(props.blogPages)
 
     return (
 
@@ -19,7 +19,7 @@ export const Body = (props) => {
             <Container className="bodyContent" fluid="lg">
                 <Bio />
                 <Uses />
-                <BlogGallery /> 
+                <BlogGallery blogPages={props.blogPages}/> 
                 <Gallery posts={props.posts}/> 
             </Container>
         </div>

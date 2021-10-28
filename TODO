@@ -82,6 +82,8 @@ To-Do:
     ✔ Component Created @done(18:28 - 21/10/21)
     ✔ Transfer sass @done(13:40 - 22/10/21)
     ☐ This should use a map to output items
+      ☐ Map is in place and outputting blogs, just need to add content to them...
+      ☐ ...then style the modal and this will be finished.
 
   Footer:
     ✔ In the absence of ideas, add a footer to the bottom of the page. @done(18:29 - 21/10/21)

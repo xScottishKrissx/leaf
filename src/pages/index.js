@@ -18,7 +18,8 @@ export default class BlogIndex extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-        galleryArray:this.props.data.galleryPages.nodes
+        galleryArray:this.props.data.galleryPages.nodes,
+        blogPages:this.props.data.blogPages.nodes
     }
        
 }
@@ -35,11 +36,12 @@ export default class BlogIndex extends React.Component {
 
   render(){
     const posts = this.state.galleryArray
+    const blogPages = this.state.blogPages
     return (
       <>
 
         <Header />
-        <Body posts={posts} />
+        <Body posts={posts} blogPages={blogPages}/>
         <Footer />    
 
       </>
@@ -296,6 +298,13 @@ export const pageQuery = graphql`
       nodes {
         frontmatter {
           title
+          excerpt
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+            id
+          }
         }
         fileAbsolutePath
       }
