@@ -10,28 +10,32 @@ import {IoMdTimer} from 'react-icons/io'
 import {IoColorPaletteOutline} from 'react-icons/io5'
 import {VscSymbolRuler} from 'react-icons/vsc'
 import {GoLinkExternal} from 'react-icons/go'
+import Modal from '../../modal/modal'
 
 export const Gallery = (props) =>{
   const [plantInfo, setPlantInfo] = useState([])
-  console.log(props.posts)
+  const [displayPopup, setPopupStatus] = useState(false)
+  // console.log(props.posts)
 
   function showPopup(e,info){
+    setPopupStatus(true)
     setPlantInfo(info)
     console.log(e.currentTarget.getElementsByTagName("div")[0])
     // This works
     // e.currentTarget.getElementsByTagName("div")[0].classList.add("showWrapper")
-    let checkTarget = e.currentTarget.getElementsByTagName("div")[0]
+    // let checkTarget = e.currentTarget.getElementsByTagName("div")[0]
 
-    document.getElementById("popup").classList.remove("hideWrapper")
-    document.getElementById("popup").classList.add("showWrapper")
+    // document.getElementById("popup").classList.remove("hideWrapper")
+    // document.getElementById("popup").classList.add("showWrapper")
   }
 
   function hidePopup(){
+    setPopupStatus(false)
     // console.log("Hide Popup")
-    document.getElementById("popup").classList.remove("showWrapper")
-    document.getElementById("fullPageMsg").classList.remove("showMsg")
+    // document.getElementById("popup").classList.remove("showWrapper")
+    // document.getElementById("fullPageMsg").classList.remove("showMsg")
 
-    document.getElementById("popup").classList.add("hideWrapper")
+    // document.getElementById("popup").classList.add("hideWrapper")
   }
 
   function showMsg(){
@@ -67,8 +71,12 @@ return(
         </div>
       </Col>
 
-    
-      
+      {displayPopup === true ? <Modal plantInfo={plantInfo} /> : <p>Don't Show Popup</p>}
+
+
+
+
+{/*         
         <div className="popupWrapper d-flex align-items-center justify-content-center position-fixed h-100 w-100 p-0" id="popup" >
           
           <Row className="popupContent d-flex w-100" onClick={null}>
@@ -112,16 +120,15 @@ return(
 
                 
               </Col>
-              {/* <CloseButton className="fullPageLink" onClick={()=>hidePopup()} aria-label="Hide" /> */}
               <Button className="fullPageLink" onClick={()=>showMsg()} variant="primary"><GoLinkExternal /></Button>
               <div id="fullPageMsg"><p>This is when you would be taken to a full separate page</p></div>
               
           </Row>
 
-          <div onClick={()=>hidePopup()} className="popupBackground position-absolute h-100 w-100" ></div>
+          <div onClick={()=>hidePopup()} id="popupBackground" className="popupBackground position-absolute h-100 w-100" ></div>
 
-        </div>
-   
+        </div> */}
+        
   </Row>
 )
 
