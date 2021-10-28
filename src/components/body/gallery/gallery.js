@@ -18,7 +18,14 @@ export const Gallery = (props) =>{
   // console.log(props.posts)
 
   function showPopup(e,info){
-    setPopupStatus(true)
+    // setPopupStatus(true)
+    if(displayPopup === true){
+      setPopupStatus(false)
+    }
+    if(displayPopup === false){
+      setPopupStatus(true)
+    }
+    console.log(displayPopup)
     setPlantInfo(info)
     console.log(e.currentTarget.getElementsByTagName("div")[0])
     // This works
@@ -60,7 +67,7 @@ export const Gallery = (props) =>{
         </Col>
         )
     })
-    console.log(plantInfo.about)
+    
 return(
     <Row className="my-5">
       
@@ -71,7 +78,7 @@ return(
         </div>
       </Col>
 
-      {displayPopup === true ? <Modal plantInfo={plantInfo} /> : <p>Don't Show Popup</p>}
+      {displayPopup === true ? <Modal plantInfo={plantInfo} show={true} updateState={setPopupStatus}/> : <p>Don't Show Popup</p>}
 
 
 
