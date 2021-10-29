@@ -19,7 +19,8 @@ export default class BlogIndex extends React.Component {
     super(props);
     this.state = {
         galleryArray:this.props.data.galleryPages.nodes,
-        blogPages:this.props.data.blogPages.nodes
+        blogPages:this.props.data.blogPages.nodes,
+        plantUses:this.props.data.plantUses.nodes
     }
        
 }
@@ -37,11 +38,12 @@ export default class BlogIndex extends React.Component {
   render(){
     const posts = this.state.galleryArray
     const blogPages = this.state.blogPages
+    const plantUses = this.state.plantUses
     return (
       <>
 
         <Header />
-        <Body posts={posts} blogPages={blogPages}/>
+        <Body posts={posts} blogPages={blogPages} plantUses={plantUses}/>
         <Footer />    
 
       </>
@@ -295,6 +297,22 @@ export const pageQuery = graphql`
     }
 
     blogPages: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/blogPages/"}}) {
+      nodes {
+        frontmatter {
+          title
+          excerpt
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+            id
+          }
+        }
+        fileAbsolutePath
+      }
+    }
+
+    plantUses: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/plantUses/"}}) {
       nodes {
         frontmatter {
           title

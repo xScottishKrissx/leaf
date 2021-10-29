@@ -11,14 +11,14 @@ import BlogGallery from './blogGallery/blogGallery'
 
 export const Body = (props) => {
 
-console.log(props.blogPages)
+// console.log(props.blogPages)
 
     return (
 
         <div>
             <Container className="bodyContent" fluid="lg">
                 <Bio />
-                <Uses />
+                <Uses plantUses={props.plantUses}/>
                 <BlogGallery blogPages={props.blogPages}/> 
                 <Gallery posts={props.posts}/> 
             </Container>
