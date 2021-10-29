@@ -317,6 +317,7 @@ export const pageQuery = graphql`
         frontmatter {
           title
           excerpt
+          modalDescription
           image {
             childImageSharp {
               gatsbyImageData

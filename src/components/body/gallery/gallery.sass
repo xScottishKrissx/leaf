@@ -29,16 +29,19 @@
 
 // Custom Popup
 .popupWrapper
+
     *
         color: white 
+    
     transform: scale(0)
     // background-color: #00000059
     left: 0%
     top: 0%
+    z-index: 10
     .popupBackground
       background-color: #00000059
       cursor: pointer
-      z-index: 0
+    //   z-index: 10
 
       
 
@@ -48,7 +51,7 @@
         // height: 500px
         max-width: 900px
         position: relative
-        z-index: 10
+        z-index: 11
     
         #closePopupBtn
             background-color: v.$primaryColour
@@ -57,7 +60,7 @@
             position: absolute
             top: 0
             right: 0
-            z-index: 20
+            // z-index: 20
             &:focus
                 box-shadow: 0 0 0 0.25rem #000
 
@@ -73,6 +76,7 @@
             bottom: 0
             right: 0
             width: 1em
+            z-index: 13
             &:hover
                 text-decoration: none
                 opacity: .75
@@ -89,7 +93,7 @@
             opacity: 0
             width: auto
             right: 0
-            z-index: -10
+            // z-index: -10
             p
                 margin: 0
                 padding: 10px

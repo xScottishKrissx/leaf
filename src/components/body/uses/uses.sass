@@ -16,7 +16,7 @@
                 border-top-right-radius: v.$borderRadius
 
 
-@media (min-width: 750px) 
+@media (min-width: 768px) 
     // Forces the image to be right up against the edge of the div
         // pr-0 does not work, so this is my solution.
     #forcePaddingRight
@@ -33,3 +33,16 @@
             border-bottom-left-radius: v.$borderRadius
 
 
+// Modal
+.plantUsesModal
+    padding: 0
+    div
+        border-top-left-radius: v.$borderRadius
+        border-top-right-radius: v.$borderRadius
+
+@media (min-width: 768px) 
+    .plantUsesModal
+        div
+            border-top-left-radius: v.$borderRadius
+            border-bottom-left-radius: v.$borderRadius
+            border-top-right-radius: 0

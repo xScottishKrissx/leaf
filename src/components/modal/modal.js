@@ -41,7 +41,7 @@ export default function Modal(props) {
                     id="popup" 
                 >
 
-                    <Row className="popupContent d-flex w-100" onClick={null}>
+                    <Row className="popupContent d-flex w-100 justify-content-center" onClick={null}>
 
                         <CloseButton id="closePopupBtn" onClick={handleClick} aria-label="Hide" className="bottom-sm-0 left-sm-0"  />
 
