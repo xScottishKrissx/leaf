@@ -17,7 +17,7 @@ export const Body = (props) => {
 
         <div>
             <Container className="bodyContent" fluid="lg">
-                <Bio />
+                <Bio bio={props.bio}/>
                 <Uses plantUses={props.plantUses}/>
                 <BlogGallery blogPages={props.blogPages}/> 
                 <Gallery posts={props.posts}/> 

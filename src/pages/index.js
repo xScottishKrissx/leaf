@@ -20,7 +20,8 @@ export default class BlogIndex extends React.Component {
     this.state = {
         galleryArray:this.props.data.galleryPages.nodes,
         blogPages:this.props.data.blogPages.nodes,
-        plantUses:this.props.data.plantUses.nodes
+        plantUses:this.props.data.plantUses.nodes,
+        bio:this.props.data.bio.nodes
     }
        
 }
@@ -39,11 +40,13 @@ export default class BlogIndex extends React.Component {
     const posts = this.state.galleryArray
     const blogPages = this.state.blogPages
     const plantUses = this.state.plantUses
+    const bio = this.state.bio
+    console.log(bio)
     return (
       <>
 
         <Header />
-        <Body posts={posts} blogPages={blogPages} plantUses={plantUses}/>
+        <Body posts={posts} blogPages={blogPages} plantUses={plantUses} bio={bio}/>
         <Footer />    
 
       </>
@@ -300,6 +303,7 @@ export const pageQuery = graphql`
       nodes {
         frontmatter {
           title
+          modalText
           excerpt
           image {
             childImageSharp {
@@ -319,6 +323,29 @@ export const pageQuery = graphql`
           excerpt
           modalDescription
           image {
+            childImageSharp {
+              gatsbyImageData
+            }
+            id
+          }
+        }
+        fileAbsolutePath
+      }
+    }
+
+    bio: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/bio/"}}) {
+      nodes {
+        frontmatter {
+          title
+          excerpt
+          description
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+            id
+          }
+          modalImage {
             childImageSharp {
               gatsbyImageData
             }

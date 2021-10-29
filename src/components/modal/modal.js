@@ -8,6 +8,7 @@ import {GoLinkExternal} from 'react-icons/go'
 import GalleryModalContent from '../body/gallery/galleryModalContent'
 import BlogGalleryModalContent from '../body/blogGallery/blogGalleryModalContent'
 import PlantUsesModalContent from '../body/uses/plantUsesModalContent'
+import BioModalContent from '../body/bio/bioModalContent'
 
 export default function Modal(props) {
 
@@ -49,6 +50,7 @@ export default function Modal(props) {
                         {props.blogGalleryModal ? <BlogGalleryModalContent blogInfo={props.blogInfo} /> : null}
                         
                         {props.plantUsesInfo ? <PlantUsesModalContent plantUsesInfo={props.plantUsesInfo} /> : null}
+                        {props.bioModal ? <BioModalContent bioInfo={props.bioInfo} /> : null}
 
                         <Button 
                             className="fullPageLink" 

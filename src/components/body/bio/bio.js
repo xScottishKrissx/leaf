@@ -1,39 +1,44 @@
 import * as React from 'react'
+import { useState } from 'react'
 
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import './bio.sass'
 
 import { Row, Col} from 'react-bootstrap'
-
-import who1 from '../../../images/who_1.png'
-import who2 from '../../../images/who_2.png'
-import who3 from '../../../images/who_3.png'
+import Modal from '../../modal/modal'
 
 export const Bio = (props) =>{
+  const [bioInfo, setBioInfo] = useState([])
+  const [displayPopup, setPopupStatus] = useState(false)
+
+  function showPopup(e,info){
+    if(displayPopup === true)setPopupStatus(false)
+    if(displayPopup === false)setPopupStatus(true)
+    setBioInfo(info)
+  }
+
+
+  // console.log(props.bio)
+  const mapBio = props.bio.map(x =>{ 
+    return (
+      <Col key={x.frontmatter.image.id} className="d-flex flex-column align-items-center" onClick={(e)=>showPopup(e, x.frontmatter)}>
+        <GatsbyImage image={getImage(x.frontmatter.image)} alt="" />
+        <h3>{x.frontmatter.title}</h3>
+    </Col>
+    )
+  })
     
 return(
     <Row className="my-5">
+      <Col lg={12}>
+        <h1>Who are Leaf.com?</h1>
+        <Row className="bioItemWrapper m-0" > {mapBio} </Row>
+      </Col>
 
-    <Col lg={12}>
-      <h1>Who are Leaf.com?</h1>
-        <Row className="bioItemWrapper m-0">
-
-          <Col className="d-flex flex-column align-items-center">
-            <img src={who1} />
-            <p>Database</p>
-          </Col>
-
-          <Col className="d-flex flex-column align-items-center">
-            <img src={who2} />
-            <p>Preservation</p>
-          </Col>
-
-          <Col className="d-flex flex-column align-items-center">
-            <img src={who3} />
-            <p>Knowledge</p>
-          </Col>
-
-        </Row>
-    </Col>
+      {displayPopup === true ?
+         <Modal bioInfo={bioInfo} show={true} updateState={setPopupStatus} bioModal={true}/> 
+         :null
+      }
   </Row>
 )
 

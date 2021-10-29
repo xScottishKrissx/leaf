@@ -21,7 +21,6 @@ export const Uses = (props) =>{
   }
 
  const upperRow = props.plantUses[0].frontmatter
- console.log(upperRow)
  const lowerRow = props.plantUses[1].frontmatter
     
 return(

@@ -20,10 +20,10 @@ export const BlogGallery = (props) =>{
  
   const mapBlogs = props.blogPages.map(x => {
     return(
-      <Col key={x.frontmatter.image.id} sm={6} lg={3} className="mb-3" onClick={(e)=>showPopup(e,x.frontmatter)}>
-        <div className="pb-3">
+      <Col key={x.frontmatter.image.id} xs={6} sm={6} lg={3} className="mb-3" onClick={(e)=>showPopup(e,x.frontmatter)}>
+        <div  className="blogItem pb-3">
         <GatsbyImage image={getImage(x.frontmatter.image)} alt="" />
-          <p className="m-2">{x.frontmatter.title}</p>
+          <h3 className="m-2">{x.frontmatter.title}</h3>
           <p className="m-2">{x.frontmatter.excerpt}</p>
         </div>
       </Col>
@@ -33,7 +33,7 @@ export const BlogGallery = (props) =>{
     return(
         <Row className="bodySection4 my-5">
           
-          <Col lg={12}>
+          <Col>
             <h1>Blog Pages</h1>
               <Row className="blogGalleryItemWrapper">
                 {mapBlogs}
