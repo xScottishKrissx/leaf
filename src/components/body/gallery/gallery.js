@@ -3,60 +3,50 @@ import './gallery.sass'
 
 import { Row, Col } from 'react-bootstrap'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 
 import Modal from '../../modal/modal'
 
 export const Gallery = (props) =>{
   const [plantInfo, setPlantInfo] = useState([])
   const [displayPopup, setPopupStatus] = useState(false)
-  const [posts, setPosts] = useState(props.posts)
-  const [endSlice, setEndSlice] = useState(6)
-
-  const [count, setCount] = useState(0);
-  const ref = useRef();
-
-  const [state, setState] = useState({
-    scrolled: false,
-    visible: false,
-  });
+  const [endSlice, setEndSlice] = useState(3)
 
   function showPopup(e,info){
     if(displayPopup === true)setPopupStatus(false)
     if(displayPopup === false)setPopupStatus(true)
     setPlantInfo(info)
   }
-
-
-
-  const [scrollTop, setScrollTop] = useState(0);
   
-
-
   // This is incrementing the way i want
   useEffect(() => {
-    function onScroll() {
-      let currentPosition = window.pageYOffset; // or use document.documentElement.scrollTop;
-      if (currentPosition > scrollTop) {       
-        setEndSlice(endSlice + 1)
-      }
-      setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
-    }
 
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    function intersectionCallback(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let targetRow = entry.target.className
+          if(targetRow.includes("galleryItemWrapper") && endSlice < props.posts.length){
+            setEndSlice(endSlice + 3)
+            observer.unobserve(entry.target);
+          }         
+        } 
+        else {}
+      });
+    }
+    
+    let options = { threshold: [1] }
+    let observer = new IntersectionObserver(intersectionCallback, options)
+    let elements = document.querySelectorAll('div')
+    for (let elm of elements)observer.observe(elm)
+    window.addEventListener("scroll", {passive: true});
+
+    return () => window.removeEventListener("scroll", {passive: true});
   }, [endSlice]);
 
-
-
   console.log(endSlice)
-
-
-
-
   
-
-  const mapGallery = props.posts.map(obj => {
+  let renderPosts = props.posts.slice(0,endSlice)
+  const mapGallery = renderPosts.map(obj => {
       return(
         <Col className="galleryItem" key={obj.frontmatter.image.id} xl={4} md={6} sm={6} onClick={(e)=>showPopup(e,obj.frontmatter)}>
           <div className="d-flex flex-row align-items-center w-100 mt-4">
@@ -78,11 +68,14 @@ return(
       
       <Col lg={12}>
         <div>
-          <h1>Plant Gallery</h1>
-          <p>You clicked {count} times</p>
-          <button onClick={() => setCount(count + 1)}> Click me </button>
-          <Row className="galleryItemWrapper" ref={ref}> {mapGallery} </Row>
+          <h1 id="test1">Plant Gallery</h1>
+          <Row className="galleryItemWrapper" > {mapGallery} </Row>
         </div>
+        {endSlice <= (props.posts.length - 3) ? 
+          <button onClick={()=>setEndSlice(endSlice + 3)}> Load 3 More</button> : 
+          null
+        }
+        
       </Col>
 
       {displayPopup === true ?

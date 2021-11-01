@@ -53,6 +53,8 @@ To-Do:
     ✔ Design plant info sections @done(18:29 - 21/10/21)
     ☐ Load Items on Scroll
       ☐ Spent a lot of time on this today (15/10/2021) and I haven't gotten too far. The good news is that I can create the same functionality with a click pretty easily so I have an out if I can't get this to work. I also have another option of just using a scroll event listener to check for the bottom of the page. So, not a lot of success but I did spent a lot of time getting to know hooks so it wasn't a total waste of time. However, i don't want to get bogged down so i'll give myself another half day to figure it out, if I can't then i will use one of the aforementioned outs.
+      ☐ 1/11/2021 - Using intersection observer and hooks i was able to get an on scroll effect working. The cards load and animate in as you scroll down the page. The only issue is that on mobile only half of them load in. Not sure what's causing the issue but i think it may have something to do with the container.
+        ☐ No further progress in why the interesection is behaving differently. I've added a button as a fall back so that might be how I proceed. I will keep investigating to see if i've missed something obvious.
     ☐ Bootstrap has a modal, use this isntead of the custom popup
       ☐ On second thought, the bootstrap modal is fine but I want to have a bit more control so im making my own
         Creating Popup:

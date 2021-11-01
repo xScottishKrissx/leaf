@@ -2,6 +2,18 @@
 
 .galleryItemWrapper
     >div
+        animation: testAni 1s
+        animation-fill-mode: forwards
+        transform: translateY(100px)
+
+        @keyframes testAni 
+            0%
+                opacity: 0
+                transform: translateY(100px)
+            100%
+                opacity: 1  
+                transform: translateY(0)  
+        
         >div
             // transition: 1s 
             cursor: pointer
