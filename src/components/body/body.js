@@ -13,6 +13,8 @@ export const Body = (props) => {
 
 // console.log(props.blogPages)
 
+
+
     return (
 
         <div>

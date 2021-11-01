@@ -59,9 +59,9 @@ To-Do:
           ✔ I've managed to get a basic animation working and it's looking pretty decent. @done(18:34 - 27/10/21)
             ✔ I've done work on the styles and I'm happy with my work. Not totally finished but in a good state at the moment @done(18:34 - 27/10/21)
           ✔ I've also managed to get a useState hook working that let's me pass info in the popup. @done(18:34 - 27/10/21)
-          ☐ I think the next step is to find a way of making this entire thing modular so I can use it with anything I want. It's currently only working in the gallery, ideally there would be no limitation.
-            ☐ After a fair amount of time i was able to get this working using setState and by lifting state so that the actual mechanism is a conditional render and not a document.getElementById
-            ☐ As for the modulartity, i think it's ok. I think there's still a bit too much duplicate code but i can make refinements to the code as I add the popup to other components.
+          ✔ I think the next step is to find a way of making this entire thing modular so I can use it with anything I want. It's currently only working in the gallery, ideally there would be no limitation. @done(12:50 - 01/11/21)
+            ✔ After a fair amount of time i was able to get this working using setState and by lifting state so that the actual mechanism is a conditional render and not a document.getElementById @done(12:50 - 01/11/21)
+            ✔ As for the modulartity, i think it's ok. I think there's still a bit too much duplicate code but i can make refinements to the code as I add the popup to other components. @done(12:50 - 01/11/21)
 
 
 

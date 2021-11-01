@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import './blogGallery.sass'
 
@@ -17,6 +17,28 @@ export const BlogGallery = (props) =>{
     if(displayPopup === false)setPopupStatus(true)
     setBlogInfo(info)
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
   const mapBlogs = props.blogPages.map(x => {
     return(
