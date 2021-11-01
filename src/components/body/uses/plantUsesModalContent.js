@@ -10,7 +10,7 @@ export default function PlantUsesModalContent(props) {
                 <GatsbyImage image={getImage(props.plantUsesInfo.image)} alt="" />
             </Col>
             
-            <Col md={6} className=" d-flex flex-column justify-content-center">
+            <Col md={6} className=" d-flex flex-column justify-content-center pe-5">
                 <h1>{props.plantUsesInfo.title}</h1>
                 <p>{props.plantUsesInfo.modalDescription}</p>
             </Col>

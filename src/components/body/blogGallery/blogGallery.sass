@@ -2,15 +2,36 @@
 
 .blogGalleryItemWrapper
     div
-        div
-
+        .blogItem
             @include v.defaultBoxAppearance
             
             img
-                border-radius: v.$borderRadius
+                border-top-right-radius: v.$borderRadius
+                border-top-left-radius: v.$borderRadius
             h3
                 font-size: 1.25rem
             p
                 font-size: 1rem
 .blogItem
     height: 100%
+
+
+
+.blogGalleryContent
+    padding: 0
+    .blogGalleryImage
+        padding: 0
+        .gatsby-image-wrapper
+            border-top-right-radius: v.$borderRadius
+            border-top-left-radius: v.$borderRadius
+            // height: 100%
+            // width: 100%
+
+
+@media (min-width: 768px) 
+    .blogGalleryContent
+        .blogGalleryImage
+            .gatsby-image-wrapper
+                border-top-right-radius:0
+                border-bottom-left-radius: v.$borderRadius
+                border-top-left-radius: v.$borderRadius
