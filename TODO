@@ -38,11 +38,11 @@ To-Do:
       ✔ Convert current code to css syntax @done(13:40 - 22/10/21)
         ✔ after splitting code into components. @done(13:40 - 22/10/21)
     ✔ (Finally) get a gatsby cloud version working @done(14:08 - 22/10/21)
-    ☐ Get gallery to load in on scroll
+    ✔ Get gallery to load in on scroll @done(11:21 - 02/11/21)
     ✔ Get Modal Working @done(19:13 - 29/10/21)
       ✔ Everything on the page should be clickable and display a modal with further information @done(19:13 - 29/10/21)
-    ☐ Add animations
-    ☐ Finished by end of 29th
+    ✔ Add animations @done(11:20 - 02/11/21)
+    ✘ Finished by end of 29th @cancelled(11:21 - 02/11/21)
       ✔ I never made this but that's ok. I took some time to get to know hooks so it was time well spent. I should be finished by 2nd Nov so im not too far away. Just need to smooth out some rough edges and get the load on scroll working. I have learned from the previous project to leave animations to the end. @done(19:13 - 29/10/21)
 
 
@@ -52,11 +52,12 @@ To-Do:
     ✔ Get rows of 4 in place @done(18:29 - 21/10/21)
     ✔ Design plant info sections @done(18:29 - 21/10/21)
     ☐ Load Items on Scroll
-      ☐ Spent a lot of time on this today (15/10/2021) and I haven't gotten too far. The good news is that I can create the same functionality with a click pretty easily so I have an out if I can't get this to work. I also have another option of just using a scroll event listener to check for the bottom of the page. So, not a lot of success but I did spent a lot of time getting to know hooks so it wasn't a total waste of time. However, i don't want to get bogged down so i'll give myself another half day to figure it out, if I can't then i will use one of the aforementioned outs.
-      ☐ 1/11/2021 - Using intersection observer and hooks i was able to get an on scroll effect working. The cards load and animate in as you scroll down the page. The only issue is that on mobile only half of them load in. Not sure what's causing the issue but i think it may have something to do with the container.
-        ☐ No further progress in why the interesection is behaving differently. I've added a button as a fall back so that might be how I proceed. I will keep investigating to see if i've missed something obvious.
-    ☐ Bootstrap has a modal, use this isntead of the custom popup
-      ☐ On second thought, the bootstrap modal is fine but I want to have a bit more control so im making my own
+      ✔ Spent a lot of time on this today (15/10/2021) and I haven't gotten too far. The good news is that I can create the same functionality with a click pretty easily so I have an out if I can't get this to work. I also have another option of just using a scroll event listener to check for the bottom of the page. So, not a lot of success but I did spent a lot of time getting to know hooks so it wasn't a total waste of time. However, i don't want to get bogged down so i'll give myself another half day to figure it out, if I can't then i will use one of the aforementioned outs. @done(11:20 - 02/11/21)
+      ✔ 1/11/2021 - Using intersection observer and hooks i was able to get an on scroll effect working. The cards load and animate in as you scroll down the page. The only issue is that on mobile only half of them load in. Not sure what's causing the issue but i think it may have something to do with the container. @done(11:20 - 02/11/21)
+        ✔ No further progress in why the interesection is behaving differently. I've added a button as a fall back so that might be how I proceed. I will keep investigating to see if i've missed something obvious. @done(11:20 - 02/11/21)
+          ✔ Just going to go ahead with the button @done(11:20 - 02/11/21)
+    ✘ Bootstrap has a modal, use this isntead of the custom popup @cancelled(11:20 - 02/11/21)
+      ✔ On second thought, the bootstrap modal is fine but I want to have a bit more control so im making my own @done(11:20 - 02/11/21)
         Creating Popup:
           ✔ I've managed to get a basic animation working and it's looking pretty decent. @done(18:34 - 27/10/21)
             ✔ I've done work on the styles and I'm happy with my work. Not totally finished but in a good state at the moment @done(18:34 - 27/10/21)
@@ -64,6 +65,9 @@ To-Do:
           ✔ I think the next step is to find a way of making this entire thing modular so I can use it with anything I want. It's currently only working in the gallery, ideally there would be no limitation. @done(12:50 - 01/11/21)
             ✔ After a fair amount of time i was able to get this working using setState and by lifting state so that the actual mechanism is a conditional render and not a document.getElementById @done(12:50 - 01/11/21)
             ✔ As for the modulartity, i think it's ok. I think there's still a bit too much duplicate code but i can make refinements to the code as I add the popup to other components. @done(12:50 - 01/11/21)
+    ✔ On mobile, the p;ant gallery items can be a bit cramped. So i've added a max-width query and set up custom rules to adjust font size which helps with space. I've also moved the latin and family names into the information columns which further helps. @done(11:10 - 02/11/21)
+    ✔ The max-time-to-grow icon doesn't really make sense. @done(11:20 - 02/11/21)
+          ✔ Fixed, there's an icon for literally how long it takes for a tree to grow. @done(11:20 - 02/11/21)
 
 
 
@@ -72,7 +76,7 @@ To-Do:
       ✔ It was, i just didn't convert from ()=>this.show to ()=>show @done(14:26 - 22/10/21)
     ✔ I have finally got the query set up to output different pages depending on what I need. I went through messing with firebase and json before settling on using the blog folder to output what I need using queries. I'm not sure this is the most efficient or even correct way of doing this but Its progress. @done(11:40 - 26/10/21)
     ☐ Populated gallery with items, now to make them appear on scroll
-      ☐ Load items on scroll
+      ✔ Load items on scroll @done(11:20 - 02/11/21)
     ✔ My use of z-index has led to a bit of a mess. I probably need to remove ALL current examples and do it again. @done(15:52 - 29/10/21)
 
   Section 2 - Bio:
@@ -90,9 +94,9 @@ To-Do:
   Section 4 - Blog Gallery:
     ✔ Component Created @done(18:28 - 21/10/21)
     ✔ Transfer sass @done(13:40 - 22/10/21)
-    ☐ This should use a map to output items
-      ☐ Map is in place and outputting blogs, just need to add content to them...
-      ☐ ...then style the modal and this will be finished.
+    ✔ This should use a map to output items @done(11:20 - 02/11/21)
+      ✔ Map is in place and outputting blogs, just need to add content to them... @done(11:20 - 02/11/21)
+      ✔ ...then style the modal and this will be finished. @done(11:20 - 02/11/21)
 
   Footer:
     ✔ In the absence of ideas, add a footer to the bottom of the page. @done(18:29 - 21/10/21)

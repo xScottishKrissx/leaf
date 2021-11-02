@@ -8,8 +8,9 @@ import { BsBrightnessHigh, BsDropletFill } from 'react-icons/bs';
 import { IoMdTimer } from 'react-icons/io'
 import { IoColorPaletteOutline } from 'react-icons/io5'
 import { VscSymbolRuler } from 'react-icons/vsc'
-import {GiFamilyTree} from 'react-icons/gi'
+import {GiTreeGrowth, GiFamilyTree} from 'react-icons/gi'
 import { MdOutlineScience } from 'react-icons/md'
+
 export default function GalleryModalContent(props) {
     return (
         <>
@@ -29,7 +30,7 @@ export default function GalleryModalContent(props) {
                     <div sm={6} className="d-flex flex-column">
                         <span title="Family"><GiFamilyTree /> {props.plantInfo.family}</span>
                         <span title="Maximum Height"><VscSymbolRuler />{props.plantInfo.maxHeight}</span>
-                        <span title="Maximum time to full height"><IoMdTimer />{props.plantInfo.maxTimeToGrow}</span>
+                        <span title="Maximum time to full height"><GiTreeGrowth />{props.plantInfo.maxTimeToGrow}</span>
                         <span title="Native To"><BiWorld />{props.plantInfo.nativeTo}</span>             
                     </div>
 
