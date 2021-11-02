@@ -1,105 +1,75 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+<!-- wp:paragraph -->
+<p>My main purpose with this project was to get practice with everything I have worked on across recent projects. Visually, it's a much simpler design than I've been doing but I knew that I would be taking on a decent amount of new learning and so I didn't want to get too distracted from my main aims.</p>
+<!-- /wp:paragraph -->
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+<!-- wp:heading -->
+<h2>leaf.com</h2>
+<!-- /wp:heading -->
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+<!-- wp:paragraph -->
+<p>leaf.com is supposed to serve as a sort of plant/flower database. I'll be honest in saying the content for this is mostly pointless and arbitrary and was just a vehicle for the practice as described below. Moving forward i want my projects to be built around more meaningful and useful subjects. </p>
+<!-- /wp:paragraph -->
 
-## 🚀 Quick start
+<!-- wp:heading -->
+<h2>Hooks</h2>
+<!-- /wp:heading -->
 
-1.  **Create a Gatsby site.**
+<!-- wp:paragraph -->
+<p>I don't actually have a lot of exposure to hooks so for leaf I wanted to get more involved, so making use of useState and useEffect I was able to produce the animate on scroll effect for the plant gallery. In addition, I made use of useState to get the popup working. I now feel a lot more comfortable with these hooks, specifically, when and how to use them. There are obviously more things to learn as these are the fundamentals but at least I have my foot in the door and can be more confident when approaching the more advanced topics.</p>
+<!-- /wp:paragraph -->
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/part-0/#gatsby-cli)) to create a new site, specifying the blog starter.
+<!-- wp:heading -->
+<h2>Gatsby + GraphiQL</h2>
+<!-- /wp:heading -->
 
-    ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
-    ```
+<!-- wp:paragraph -->
+<p>In previous projects, I have not used graphiQL as often as I would have liked so for this project I decided I wanted to get as much of the page being stored in .md files as possible so I could create the code needed to access and display them. In order for this to work, I had to figure out how to get multiple queries working. I learned that all you needed to do is to name your queries and reference that, and the correct sub-directory when accessing the needed information. This allowed me to render everything, apart from section headers, using markdown files.</p>
+<!-- /wp:paragraph -->
 
-1.  **Start developing.**
+<!-- wp:image {"align":"center","id":2593,"width":510,"height":316,"sizeSlug":"full","linkDestination":"none"} -->
+<div class="wp-block-image"><figure class="aligncenter size-full is-resized"><img src="https://christopherdunne.co.uk/wp-content/uploads/2021/11/2021-11-02-13_37_22-index.js-leaf-workspace-Workspace-Visual-Studio-Code.png" alt="" class="wp-image-2593" width="510" height="316"/></figure></div>
+<!-- /wp:image -->
 
-    Navigate into your new site’s directory and start it up.
+<!-- wp:heading -->
+<h2>Intersection Observer + Animate on Scroll</h2>
+<!-- /wp:heading -->
 
-    ```shell
-    cd my-blog-starter/
-    gatsby develop
-    ```
+<!-- wp:paragraph -->
+<p>As mentioned I needed to use hooks to get this working which took me a while to figure out. I eventually did after a lot of reading the documentation along with trial and error. The main difference between this version and the one I used in the Attica project is that I needed to update an array instead of adding a class. This meant using useState to set a new array when required.</p>
+<!-- /wp:paragraph -->
 
-1.  **Open the source code and start editing!**
+<!-- wp:heading -->
+<h2>React Bootstrap</h2>
+<!-- /wp:heading -->
 
-    Your site is now running at `http://localhost:8000`!
+<!-- wp:paragraph -->
+<p>In this project, I decided to use the bootstrap utilities&nbsp;syntax as much as possible to see what would happen and how it would change my workflow. This meant everything that is listed under the utilities&nbsp;section in the documentation had to be used in place of sass. In the end, I'm not sure if using bootstrap syntax is better than just well organised sass especially if you're dealing with a larger codebase. It was ok here because I have limited elements on the page but I think I would prefer not to set things like padding and margin on an element by element basis, especially if they're all using the same values. I understand the benefits of doing it this way as anyone who needs to change something can, as long as they're familiar with bootstrap, but it wouldn't be my preference. Still, it was an interesting experience and going forward I think I will land somewhere in the middle where I will use bootstrap utilities for containers and wrappers, then use sass for everything else.</p>
+<!-- /wp:paragraph -->
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+<!-- wp:heading -->
+<h2>SASS</h2>
+<!-- /wp:heading -->
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+<!-- wp:paragraph -->
+<p>It's been a while since I properly used sass so while I have used it in the previous project, I didn't really go that far. In this project, I made use of storing variables and mixins in a separate file and importing them.  </p>
+<!-- /wp:paragraph -->
 
-## 🚀 Quick start (Gatsby Cloud)
+<!-- wp:heading -->
+<h2>Conclusion</h2>
+<!-- /wp:heading -->
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+<!-- wp:paragraph -->
+<p>It could be argued that this is the least impressive of my recent projects but for me, it was very useful. I learned a lot about hooks and got a lot more practice with the Gatsby development cycle on top of the continuous exposure to React. I was also able to advance with SASS and made extensive use of react-bootstrap and bootstrap utilities&nbsp;for most of the design. </p>
+<!-- /wp:paragraph -->
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-blog)
+<!-- wp:paragraph -->
+<p>Overall a good project but, as mentioned at the start, moving forward I want to design and build things that aren't just vehicles for practising individual web development principles. At the very least I want to incorporate more API and design around websites or products I would actually use or be interested in. These recent projects are useful to an extent but I will admit to struggling a bit with having to come up with fake content for a fake website. I think it's time to move on from that.</p>
+<!-- /wp:paragraph -->
 
-## 🧐 What's inside?
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/products/cloud/)
-
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+<!-- wp:paragraph -->
+<p>Github Repo: </p>
+<!-- /wp:paragraph -->
