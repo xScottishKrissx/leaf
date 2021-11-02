@@ -1,6 +1,7 @@
 @use '../../../_variables' as v
 
 .bioItemWrapper
+    transform: translateX(100px)
     @include v.defaultBoxAppearance
     div
         img
@@ -25,3 +26,14 @@
         border-top-right-radius: 0
         border-bottom-left-radius: v.$borderRadius 
         border-top-left-radius: v.$borderRadius   
+
+.testAnimate
+    animation: aniLeft 2s
+    animation-fill-mode: forwards
+
+    @keyframes aniLeft 
+        0%
+            transform: translateX(100px)
+        100%
+            transform: translateX(0)    
+    
