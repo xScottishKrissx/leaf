@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import './bio.sass'
@@ -10,7 +10,6 @@ import Modal from '../../modal/modal'
 export const Bio = (props) =>{
   const [bioInfo, setBioInfo] = useState([])
   const [displayPopup, setPopupStatus] = useState(false)
-  const [addClass, setClass] = useState()
 
   function showPopup(e,info){
     if(displayPopup === true)setPopupStatus(false)

@@ -41,9 +41,8 @@ export const Gallery = (props) =>{
     window.addEventListener("scroll", {passive: true});
 
     return () => window.removeEventListener("scroll", {passive: true});
-  }, [endSlice]);
+  }, [endSlice, props.posts.length]);
 
-  console.log(endSlice)
   
   let renderPosts = props.posts.slice(0,endSlice)
   const mapGallery = renderPosts.map(obj => {
@@ -89,5 +88,3 @@ return(
 }
 
 export default Gallery;
-{/* <Button variant="outline-secondary">Secondary</Button> */}
-

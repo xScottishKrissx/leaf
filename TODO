@@ -2,9 +2,25 @@
 Todo:
   Goals:
     ☐ More practice with react and gatsby
+
+      ☐ React Hooks
+        ☐ useState, useEffect 
+          ☐ really valuable practice here, feel like i understand both better than before.
+
+      ☐ gatsby
+        ☐ image plugins and rendering to page
+        ☐ used graphql queries to output everthing on load, then used props to render again into a custom modal
+        ☐ figured out how to use mutliple query calls to get information from separate folder directories
+        
     ☐ more practice with animate on scroll
+      ☐ using intersection observer with useState
+
     ☐ more practice with bootstrap
       ☐ actually use the syntax(bonus points for variables and mixins)
+        ☐ most of the style code uses bootstrap utilities
+    
+    ☐ sass
+      ☐ used mixins and variables a lot to reduce clutter and made it easier to change styles
 
   
 Notes:
@@ -75,7 +91,7 @@ To-Do:
     ✔ posts isnt propegating into gallery @done(14:26 - 22/10/21)
       ✔ It was, i just didn't convert from ()=>this.show to ()=>show @done(14:26 - 22/10/21)
     ✔ I have finally got the query set up to output different pages depending on what I need. I went through messing with firebase and json before settling on using the blog folder to output what I need using queries. I'm not sure this is the most efficient or even correct way of doing this but Its progress. @done(11:40 - 26/10/21)
-    ☐ Populated gallery with items, now to make them appear on scroll
+    ✔ Populated gallery with items, now to make them appear on scroll @done(12:35 - 02/11/21)
       ✔ Load items on scroll @done(11:20 - 02/11/21)
     ✔ My use of z-index has led to a bit of a mess. I probably need to remove ALL current examples and do it again. @done(15:52 - 29/10/21)
 
