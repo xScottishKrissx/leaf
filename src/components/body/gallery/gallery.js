@@ -72,8 +72,8 @@ return(
           <Row className="galleryItemWrapper" > {mapGallery} </Row>
         </div>
         {endSlice <= (props.posts.length - 3) ? 
-          <button onClick={()=>setEndSlice(endSlice + 3)}> Load 3 More</button> : 
-          null
+          <button className="customButton" onClick={()=>setEndSlice(endSlice + 3)}> Load 3 More</button> 
+          : null
         }
         
       </Col>
@@ -89,5 +89,5 @@ return(
 }
 
 export default Gallery;
-
+{/* <Button variant="outline-secondary">Secondary</Button> */}
 
